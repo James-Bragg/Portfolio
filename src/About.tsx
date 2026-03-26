@@ -65,7 +65,7 @@ const About: React.FC = () => {
                 <div className="p-4 rounded-lg bg-gray-900 border border-gray-800 shadow transition hover:shadow-lg">
                   <h4 className="font-semibold text-cyan-300">Technical Skills</h4>
                   <div className="mt-3 flex flex-wrap gap-2">
-                    {['React', 'JavaScript', 'Tailwind', 'SQL', 'Python', 'Django', 'Git', 'GitHub', 'REST', 'AWS'].map(skill => (
+                    {['React', 'JavaScript', 'Tailwind', 'SQL', 'Python', 'Django', 'Git', 'GitHub', 'REST', 'AWS', 'RUST'].map(skill => (
                       <span key={skill} className="px-3 py-1 bg-gray-800/60 text-sm rounded-full text-gray-200">{skill}</span>
                     ))}
                   </div>

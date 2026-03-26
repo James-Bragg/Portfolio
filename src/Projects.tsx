@@ -1,6 +1,14 @@
 import React from 'react';
 
-const projects = [
+interface Project {
+	title: string;
+	description: string;
+	tech: string[];
+	repo: string;
+	demo: string;
+}
+
+const completedProjects: Project[] = [
 	{
 		title: 'DnD Companion',
 		description:
@@ -25,6 +33,10 @@ const projects = [
 		repo: 'https://github.com/James-Bragg/Portfolio',
 		demo: 'https://james-bragg.github.io/Portfolio/#/projects',
 	},
+];
+
+const ongoingProjects: Project[] = [
+	// Add your ongoing projects here
 ];
 
 const Projects: React.FC = () => {
@@ -65,58 +77,126 @@ const Projects: React.FC = () => {
 						</p>
 					</header>
 
-					<section className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-						{projects.map((p) => (
-							<article
-								key={p.title}
-								className="group relative bg-gray-900 border border-gray-800 p-5 rounded-lg shadow hover:shadow-xl transition"
-							>
-								<div className="flex items-start justify-between gap-4">
-									<div>
-										<h3 className="text-lg font-semibold text-gray-100">
-											{p.title}
-										</h3>
-										<p className="text-sm text-gray-300 mt-2">
-											{p.description}
-										</p>
+					{/* Ongoing Projects Section */}
+					<section className="mb-12">
+						<h2 className="text-2xl font-bold text-purple-200 mb-4">
+							Ongoing Projects
+						</h2>
+						{ongoingProjects.length > 0 ? (
+							<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+								{ongoingProjects.map((p) => (
+									<article
+										key={p.title}
+										className="group relative bg-gray-900 border border-gray-800 p-5 rounded-lg shadow hover:shadow-xl transition"
+									>
+										<div className="flex items-start justify-between gap-4">
+											<div>
+												<h3 className="text-lg font-semibold text-gray-100">
+													{p.title}
+												</h3>
+												<p className="text-sm text-gray-300 mt-2">
+													{p.description}
+												</p>
 
-										<div className="mt-3 flex flex-wrap gap-2">
-											{p.tech.map((t) => (
-												<span
-													key={t}
-													className="text-xs px-2 py-1 rounded-full bg-gray-800/60 text-gray-200"
+												<div className="mt-3 flex flex-wrap gap-2">
+													{p.tech.map((t) => (
+														<span
+															key={t}
+															className="text-xs px-2 py-1 rounded-full bg-gray-800/60 text-gray-200"
+														>
+															{t}
+														</span>
+													))}
+												</div>
+											</div>
+
+											<div className="flex flex-col items-end gap-2">
+												<a
+													href={p.demo}
+													className="text-xs px-3 py-1 rounded-md bg-cyan-500 hover:bg-cyan-600 text-black font-medium transition"
+													target="_blank"
+													rel="noopener noreferrer"
 												>
-													{t}
-												</span>
-											))}
+													Demo
+												</a>
+												<a
+													href={p.repo}
+													className="text-xs px-3 py-1 rounded-md bg-transparent border border-gray-700 hover:bg-gray-800 text-gray-200 transition"
+													target="_blank"
+													rel="noopener noreferrer"
+												>
+													Repo
+												</a>
+											</div>
+										</div>
+
+										<div className="mt-4 text-xs text-gray-400">
+											Role: Full-stack · Year: 2024
+										</div>
+									</article>
+								))}
+							</div>
+						) : (
+							<p className="text-gray-400 italic">
+								No ongoing projects at the moment.
+							</p>
+						)}
+					</section>
+
+					{/* Completed Projects Section */}
+					<section>
+						<h2 className="text-2xl font-bold text-green-200 mb-4">
+							Completed Projects
+						</h2>
+						<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+							{completedProjects.map((p) => (
+								<article
+									key={p.title}
+									className="group relative bg-gray-900 border border-gray-800 p-5 rounded-lg shadow hover:shadow-xl transition"
+								>
+									<div className="flex items-start justify-between gap-4">
+										<div>
+											<h3 className="text-lg font-semibold text-gray-100">
+												{p.title}
+											</h3>
+											<p className="text-sm text-gray-300 mt-2">
+												{p.description}
+											</p>
+
+											<div className="mt-3 flex flex-wrap gap-2">
+												{p.tech.map((t) => (
+													<span
+														key={t}
+														className="text-xs px-2 py-1 rounded-full bg-gray-800/60 text-gray-200"
+													>
+														{t}
+													</span>
+												))}
+											</div>
+										</div>
+
+										<div className="flex flex-col items-end gap-2">
+											<a
+												href={p.demo}
+												className="text-xs px-3 py-1 rounded-md bg-cyan-500 hover:bg-cyan-600 text-black font-medium transition"
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												Demo
+											</a>
+											<a
+												href={p.repo}
+												className="text-xs px-3 py-1 rounded-md bg-transparent border border-gray-700 hover:bg-gray-800 text-gray-200 transition"
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												Repo
+											</a>
 										</div>
 									</div>
-
-									<div className="flex flex-col items-end gap-2">
-										<a
-											href={p.demo}
-											className="text-xs px-3 py-1 rounded-md bg-cyan-500 hover:bg-cyan-600 text-black font-medium transition"
-											target="_blank"
-											rel="noopener noreferrer"
-										>
-											Demo
-										</a>
-										<a
-											href={p.repo}
-											className="text-xs px-3 py-1 rounded-md bg-transparent border border-gray-700 hover:bg-gray-800 text-gray-200 transition"
-											target="_blank"
-											rel="noopener noreferrer"
-										>
-											Repo
-										</a>
-									</div>
-								</div>
-
-								<div className="mt-4 text-xs text-gray-400">
-									Role: Full-stack · Year: 2024
-								</div>
-							</article>
-						))}
+								</article>
+							))}
+						</div>
 					</section>
 				</div>
 			</div>
