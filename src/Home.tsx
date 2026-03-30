@@ -57,7 +57,7 @@ const Home: React.FC = () => {
                   <h4 className="text-cyan-300 font-semibold">Highlights</h4>
                   <ul className="text-sm text-gray-300 mt-2 space-y-1">
                     <li>Using Frameworks such as React and Django.</li>
-                    <li>Building Projects using a wide range of technologies. For example, Python, SQL, AWS,</li>
+                    <li>Building Projects using a wide range of technologies. For example, Python, SQL, AWS, React</li>
                   </ul>
                 </div>
               </div>

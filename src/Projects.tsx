@@ -36,7 +36,11 @@ const completedProjects: Project[] = [
 ];
 
 const ongoingProjects: Project[] = [
-	// Add your ongoing projects here
+	{
+		title: 'Rust knowledge development',
+		description: 'Learning the rust programming language to better my knowledge of lower level programming and memory management.',
+		tech: ['Rust']
+	}
 ];
 
 const Projects: React.FC = () => {
