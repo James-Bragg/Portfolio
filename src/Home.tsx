@@ -65,7 +65,7 @@ const Home: React.FC = () => {
 
             <aside className="md:col-span-1 flex flex-col items-center text-center">
               <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-cyan-500 shadow-lg transform transition hover:scale-[1.03]">
-                <img src="/Portfolio/Favicon.jpeg" alt="James Bragg" className="w-full h-full object-cover" />
+                <img src="/Portfolio/James.png" alt="James Bragg" className="w-full h-full object-cover" />
               </div>
 
               <div className="mt-4 w-full bg-gray-850/10 border border-gray-800 rounded-lg p-3 text-left">
