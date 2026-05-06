@@ -80,7 +80,7 @@ const About: React.FC = () => {
                   <li className="relative">
                     <span className="absolute -left-6 top-0 inline-flex items-center justify-center w-3 h-3 rounded-full bg-cyan-400 ring-2 ring-gray-900"></span>
                     <div className="font-semibold text-gray-100">Dissertation Project — Student Social Web Platform</div>
-                    <div className="text-xs text-gray-400">Full-stack development with Django & React | Collaborated with peers</div>
+                    <div className="text-xs text-gray-400">Full-stack development with Django & React</div>
                   </li>
                   <li className="relative">
                     <span className="absolute -left-6 top-0 inline-flex items-center justify-center w-3 h-3 rounded-full bg-cyan-400 ring-2 ring-gray-900"></span>
