@@ -36,7 +36,20 @@ const completedProjects: Project[] = [
 ];
 
 const ongoingProjects: Project[] = [
-	// Add your ongoing projects here
+	{
+		title: 'Learning Rust and Systems Programming',
+		description: 'Currently exploring Rust programming language and systems-level concepts to build efficient, low-level applications and deepen understanding of computer systems.',
+		tech: ['Rust', 'Systems Programming'],
+		repo: '#',
+		demo: '#',
+	},
+	{
+		title: 'Raspberry Pi Web Server',
+		description: 'Building a general-purpose server on Raspberry Pi using Rust for hosting applications, emphasizing efficiency, memory safety, and low-power operation.',
+		tech: ['Rust', 'Raspberry Pi', 'Web Server'],
+		repo: '#',
+		demo: '#',
+	},
 ];
 
 const Projects: React.FC = () => {
@@ -68,12 +81,11 @@ const Projects: React.FC = () => {
 					</svg>
 
 					<header className="mb-8">
-						<h1 className="text-3xl font-extrabold text-cyan-200">
-							Projects
+						<h1 className="text-4xl font-extrabold text-cyan-200 leading-tight">
+							My <span className="text-cyan-400">Projects</span>
 						</h1>
-						<p className="text-gray-300 mt-2">
-							Selected work — focused on frontend, tooling and small backend
-							services.
+						<p className="text-gray-300 text-lg leading-relaxed mt-4">
+							Explore my portfolio of completed projects, spanning web applications, system programming, and general software development. Each project highlights innovative solutions, efficient algorithms, and a dedication to clean, maintainable code.
 						</p>
 					</header>
 
@@ -111,14 +123,16 @@ const Projects: React.FC = () => {
 											</div>
 
 											<div className="flex flex-col items-end gap-2">
-												<a
-													href={p.demo}
-													className="text-xs px-3 py-1 rounded-md bg-cyan-500 hover:bg-cyan-600 text-black font-medium transition"
-													target="_blank"
-													rel="noopener noreferrer"
-												>
-													Demo
-												</a>
+												{p.demo !== '#' && (
+													<a
+														href={p.demo}
+														className="text-xs px-3 py-1 rounded-md bg-cyan-500 hover:bg-cyan-600 text-black font-medium transition"
+														target="_blank"
+														rel="noopener noreferrer"
+													>
+														Demo
+													</a>
+												)}
 												<a
 													href={p.repo}
 													className="text-xs px-3 py-1 rounded-md bg-transparent border border-gray-700 hover:bg-gray-800 text-gray-200 transition"
