@@ -17,13 +17,13 @@ const Contact: React.FC = () => {
           </svg>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-            <div className="bg-gray-900 border border-gray-800 p-8 rounded-lg shadow-lg">
-              <h1 className="text-cyan-400 font-extrabold text-3xl mb-3">Get in touch</h1>
-              <p className="text-gray-300 mb-6">I'm available for freelance projects, contract work, and full-time roles. Reach out and I'll respond within 48 hours.</p>
+            <div className="bg-gray-900 border border-gray-800 p-8 rounded-lg shadow-lg animate-slide-in-left\">
+              <h1 className=\"text-cyan-400 font-extrabold text-3xl mb-3 animate-fade-in-down\">Get in touch</h1>
+              <p className=\"text-gray-300 mb-6 animate-fade-in-up\" style={{animationDelay: '0.2s'}}>I'm available for freelance projects, contract work, and full-time roles. Reach out and I'll respond within 48 hours.</p>
 
               <a
                 href="mailto:jamesbragg01@outlook.com"
-                className="inline-flex items-center gap-3 bg-cyan-500 hover:bg-cyan-600 text-black px-4 py-2 rounded-md shadow transition"
+                className="inline-flex items-center gap-3 bg-cyan-500 hover:bg-cyan-600 text-black px-4 py-2 rounded-md shadow transition transform hover:scale-105 animate-fade-in-up" style={{animationDelay: '0.3s'}}
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden>
                   <path d="M2 6.5v11A2.5 2.5 0 0 0 4.5 20h15A2.5 2.5 0 0 0 22 17.5v-11A2.5 2.5 0 0 0 19.5 4h-15A2.5 2.5 0 0 0 2 6.5z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -38,9 +38,9 @@ const Contact: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-gray-900 border border-gray-800 p-8 rounded-lg shadow-lg">
-              <h2 className="text-cyan-300 font-bold text-xl mb-4">Socials & links</h2>
-              <p className="text-gray-300 mb-4">Connect with me on these platforms or view my work.</p>
+            <div className="bg-gray-900 border border-gray-800 p-8 rounded-lg shadow-lg animate-slide-in-right">
+              <h2 className="text-cyan-300 font-bold text-xl mb-4 animate-fade-in-down" style={{animationDelay: '0.2s'}}>Socials & links</h2>
+              <p className="text-gray-300 mb-4 animate-fade-in-up" style={{animationDelay: '0.3s'}}>Connect with me on these platforms or view my work.</p>
 
               <ul className="flex flex-col gap-3">
                 <li>

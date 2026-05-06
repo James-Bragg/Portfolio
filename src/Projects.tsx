@@ -81,10 +81,10 @@ const Projects: React.FC = () => {
 					</svg>
 
 					<header className="mb-8">
-						<h1 className="text-4xl font-extrabold text-cyan-200 leading-tight">
+						<h1 className="text-4xl font-extrabold text-cyan-200 leading-tight animate-fade-in-down">
 							My <span className="text-cyan-400">Projects</span>
 						</h1>
-						<p className="text-gray-300 text-lg leading-relaxed mt-4">
+						<p className="text-gray-300 text-lg leading-relaxed mt-4 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
 							Explore my portfolio of completed projects, spanning web applications, system programming, and general software development. Each project highlights innovative solutions, efficient algorithms, and a dedication to clean, maintainable code.
 						</p>
 					</header>

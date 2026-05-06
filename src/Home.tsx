@@ -18,33 +18,33 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
             <section className="md:col-span-2 space-y-6">
               <div className="prose prose-invert max-w-none">
-                <h1 className="text-4xl font-extrabold text-cyan-200 leading-tight">
-                  Hi, I’m <span className="text-cyan-400">James Bragg</span>
+                <h1 className="text-4xl font-extrabold text-cyan-200 leading-tight animate-fade-in-down">
+                  Hi, I'm <span className="text-cyan-400">James Bragg</span>
                 </h1>
-                <p className="text-gray-300 text-lg leading-relaxed">
+                <p className="text-gray-300 text-lg leading-relaxed animate-fade-in-up transition-all duration-500" style={{animationDelay: '0.2s'}}>
                   I build polished, accessible interfaces and reliable backend services that deliver exceptional user experiences. With a passion for clean code and scalable architecture, I focus on performance optimization, developer ergonomics, and shipping features that solve real-world problems. My expertise spans modern web technologies, from responsive React applications to efficient data structures and algorithms, always prioritizing accessibility, security, and maintainability to create solutions that stand the test of time.
                 </p>
               </div>
 
               <div className="flex flex-wrap gap-3">
-                <Link to="/projects" className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-black px-4 py-2 rounded-md font-medium shadow">
+                <Link to="/projects" className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-black px-4 py-2 rounded-md font-medium shadow transition transform hover:scale-105 hover:shadow-lg animate-fade-in-up" style={{animationDelay: '0.4s'}}>
                 View projects
                 </Link>
                 <Link
                   to="/about"
-                  className="inline-flex items-center gap-2 bg-transparent border border-gray-700 hover:bg-gray-800 px-4 py-2 rounded-md text-gray-200"
+                  className="inline-flex items-center gap-2 bg-transparent border border-gray-700 hover:bg-gray-800 px-4 py-2 rounded-md text-gray-200 transition transform hover:scale-105 animate-fade-in-up" style={{animationDelay: '0.5s'}}
                 >
                   About me
                 </Link>
                 <a
                   href="mailto:jamesbragg01@outlook.com"
-                  className="inline-flex items-center gap-2 bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-md text-gray-200"
+                  className="inline-flex items-center gap-2 bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-md text-gray-200 transition transform hover:scale-105 animate-fade-in-up" style={{animationDelay: '0.6s'}}
                 >
                   Contact
                 </a>
               </div>
 
-              <div className="mt-4 grid sm:grid-cols-2 gap-4">
+              <div className="mt-4 grid sm:grid-cols-2 gap-4 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
                 <div className="p-4 rounded-lg bg-gray-900 border border-gray-800 shadow">
                   <h4 className="text-cyan-300 font-semibold">Quick snapshot</h4>
                   <p className="text-sm text-gray-300 mt-2">Dedicated Software Engineer with a 1st Class BSc in Computer Science from the University of Bedfordshire. Passionate about leveraging technology to solve complex problems, with expertise in full-stack development and a commitment to delivering high-quality, user-centric solutions in fast-paced environments.
@@ -62,7 +62,7 @@ const Home = () => {
             </section>
 
             <aside className="md:col-span-1 flex flex-col items-center text-center">
-              <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-cyan-500 shadow-lg transform transition hover:scale-[1.03]">
+              <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-cyan-500 shadow-lg transform transition hover:scale-[1.03] animate-fade-in-up" style={{animationDelay: '0.3s'}}>
                 <img src="/Portfolio/James.png" alt="James Bragg" className="w-full h-full object-cover" />
               </div>
 
