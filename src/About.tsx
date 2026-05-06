@@ -20,7 +20,7 @@ const About: React.FC = () => {
             <aside className="md:col-span-1 flex flex-col items-center text-center">
               <img
                 src="/Portfolio/James_2.png" alt="Profile"
-                className="w-40 h-40 rounded-full object-cover border-4 border-cyan-500 shadow-lg transform transition-transform hover:scale-[1.03] animate-fade-in-down"
+                className="w-40 h-40 rounded-full object-cover object-top border-4 border-cyan-500 shadow-lg transform transition-transform hover:scale-[1.03] animate-fade-in-down"
               />
               <h1 className="mt-4 text-2xl font-extrabold text-cyan-300 animate-fade-in-up" style={{animationDelay: '0.2s'}}>James Bragg</h1>
               <p className="mt-1 text-sm text-gray-300 animate-fade-in-up" style={{animationDelay: '0.3s'}}>Software developer — frontend & backend</p>
