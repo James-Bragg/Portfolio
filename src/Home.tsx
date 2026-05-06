@@ -69,6 +69,7 @@ const Home = () => {
               <div className="mt-4 w-full bg-gray-850/10 border border-gray-800 rounded-lg p-3 text-left">
                 <h3 className="text-xs text-gray-300 uppercase tracking-wide">Contact</h3>
                 <p className="mt-2 text-sm text-gray-300">Email: <a href="mailto:jamesbragg01@outlook.com" className="text-cyan-300">jamesbragg01@outlook.com</a></p>
+                <p className="mt-1 text-sm text-gray-300">Phone: <a href="tel:07483210270" className="text-cyan-300">07483 210270</a></p>
               </div>
             </aside>
           </div>
