@@ -19,7 +19,7 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
             <aside className="md:col-span-1 flex flex-col items-center text-center">
               <img
-                src="/Portfolio/Favicon.jpeg" alt="Profile"
+                src="/Portfolio/James_2.png" alt="Profile"
                 className="w-40 h-40 rounded-full object-cover border-4 border-cyan-500 shadow-lg transform transition-transform hover:scale-[1.03]"
               />
               <h1 className="mt-4 text-2xl font-extrabold text-cyan-300">James Bragg</h1>
