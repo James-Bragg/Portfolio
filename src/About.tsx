@@ -55,9 +55,7 @@ const About: React.FC = () => {
               <div className="prose prose-invert max-w-none">
                 <h2 className="text-3xl font-extrabold text-cyan-200">About</h2>
                 <p className="text-gray-300 leading-relaxed">
-                  I build polished, accessible user interfaces and reliable backend services. My focus is on
-                  developer ergonomics, performance and shipping features that solve real problems. I enjoy
-                  refining design-to-code workflows and learning new tools.
+                  I'm a Software Engineer with a passion for building polished, accessible interfaces and reliable systems. Beyond code, I'm driven by curiosity, creative problem-solving, and a commitment to continuous learning. I thrive in collaborative environments where I can lead teams, mentor peers, and contribute to meaningful projects. Whether optimizing algorithms, managing complex projects using PRINCE2 principles, or exploring emerging technologies, I bring both technical rigor and a thoughtful approach to every challenge. Outside the tech world, I'm enthusiastic about storytelling through film, immersed in tabletop gaming and creative worlds, and always eager to connect with others. I believe great solutions come from diverse perspectives and genuine teamwork.
                 </p>
               </div>
 
@@ -65,7 +63,7 @@ const About: React.FC = () => {
                 <div className="p-4 rounded-lg bg-gray-900 border border-gray-800 shadow transition hover:shadow-lg">
                   <h4 className="font-semibold text-cyan-300">Technical Skills</h4>
                   <div className="mt-3 flex flex-wrap gap-2">
-                    {['React', 'JavaScript', 'Tailwind', 'SQL', 'Python', 'Django', 'Git', 'GitHub', 'REST', 'AWS', 'RUST'].map(skill => (
+                    {['React', 'JavaScript', 'Tailwind', 'SQL', 'Python', 'Django', 'Git', 'GitHub', 'REST', 'AWS', 'RUST', 'Agile', 'PRINCE2', 'Project Management', 'Team Leadership', 'Problem Solving'].map(skill => (
                       <span key={skill} className="px-3 py-1 bg-gray-800/60 text-sm rounded-full text-gray-200">{skill}</span>
                     ))}
                   </div>
@@ -77,29 +75,54 @@ const About: React.FC = () => {
                   <li className="relative">
                     <span className="absolute -left-6 top-0 inline-flex items-center justify-center w-3 h-3 rounded-full bg-cyan-400 ring-2 ring-gray-900"></span>
                     <div className="font-semibold text-gray-100">BSc (Hons) Computer Science — 1st Class</div>
-                    <div className="text-xs text-gray-400">University of Bedfordshire</div>
+                    <div className="text-xs text-gray-400">University of Bedfordshire | 2023</div>
+                  </li>
+                  <li className="relative">
+                    <span className="absolute -left-6 top-0 inline-flex items-center justify-center w-3 h-3 rounded-full bg-cyan-400 ring-2 ring-gray-900"></span>
+                    <div className="font-semibold text-gray-100">Dissertation Project — Student Social Web Platform</div>
+                    <div className="text-xs text-gray-400">Full-stack development with Django & React | Collaborated with peers</div>
+                  </li>
+                  <li className="relative">
+                    <span className="absolute -left-6 top-0 inline-flex items-center justify-center w-3 h-3 rounded-full bg-cyan-400 ring-2 ring-gray-900"></span>
+                    <div className="font-semibold text-gray-100">University Group Projects</div>
+                    <div className="text-xs text-gray-400">Collaborative work using PRINCE2 principles and agile methodologies</div>
+                  </li>
+                  <li className="relative">
+                    <span className="absolute -left-6 top-0 inline-flex items-center justify-center w-3 h-3 rounded-full bg-cyan-400 ring-2 ring-gray-900"></span>
+                    <div className="font-semibold text-gray-100">Project Manager — Multiple University Projects</div>
+                    <div className="text-xs text-gray-400">Led and coordinated cross-functional teams, managed timelines, deliverables, and stakeholder communications</div>
                   </li>
                   <li className="relative">
                     <span className="absolute -left-6 top-0 inline-flex items-center justify-center w-3 h-3 rounded-full bg-cyan-400 ring-2 ring-gray-900"></span>
                     <div className="font-semibold text-gray-100">Personal Project — DnD Companion App</div>
-                    <div className="text-xs text-gray-400">Frontend app to manage campaigns and assets for players</div>
+                    <div className="text-xs text-gray-400">Full-stack development for managing D&D campaigns</div>
                   </li>
                 </ol>
                 </div>
               </div>
 
               <div className="mt-2 p-4 rounded-lg bg-gradient-to-r from-gray-900/40 to-gray-800/30 border border-gray-800">
-                <h4 className="font-semibold text-cyan-300 mb-3">Outside of the Software Industry</h4>
+                <h4 className="font-semibold text-cyan-300 mb-3">Outside of the Tech Industry</h4>
                 <ol className="relative border-l border-gray-800 ml-2 pl-4 space-y-6 text-sm text-gray-300">
                   <li className="relative">
                     <span className="absolute -left-6 top-0 inline-flex items-center justify-center w-3 h-3 rounded-full bg-cyan-400 ring-2 ring-gray-900"></span>
                     <div className="font-semibold text-gray-100">Exploring Technologies</div>
-                    <div className="text-xs text-gray-400">I like to keep up with new tech trends and experiment with emerging tools. Weather it be Hardware, or software in nature.</div>
+                    <div className="text-xs text-gray-400">I keep up with new tech trends and experiment with emerging tools—both hardware and software. A lifelong learner passionate about innovation across all domains.</div>
                   </li>
                   <li className="relative">
                     <span className="absolute -left-6 top-0 inline-flex items-center justify-center w-3 h-3 rounded-full bg-cyan-400 ring-2 ring-gray-900"></span>
-                    <div className="font-semibold text-gray-100">Entertainment</div>
-                    <div className="text-xs text-gray-400">I enjoy watching movies, playing games both digital and table top, as well as keeping social with friends and family.</div>
+                    <div className="font-semibold text-gray-100">Gaming & Tabletop RPGs</div>
+                    <div className="text-xs text-gray-400">Passionate about both digital and tabletop gaming, particularly D&D and strategy-based games. I enjoy the creative problem-solving and strategic thinking these activities demand.</div>
+                  </li>
+                  <li className="relative">
+                    <span className="absolute -left-6 top-0 inline-flex items-center justify-center w-3 h-3 rounded-full bg-cyan-400 ring-2 ring-gray-900"></span>
+                    <div className="font-semibold text-gray-100">Film & Entertainment</div>
+                    <div className="text-xs text-gray-400">I enjoy exploring storytelling through movies and various media, appreciating both cinematography and narrative depth across different genres and cultures.</div>
+                  </li>
+                  <li className="relative">
+                    <span className="absolute -left-6 top-0 inline-flex items-center justify-center w-3 h-3 rounded-full bg-cyan-400 ring-2 ring-gray-900"></span>
+                    <div className="font-semibold text-gray-100">Social & Community</div>
+                    <div className="text-xs text-gray-400">I value spending quality time with friends and family, whether collaborating on projects, sharing experiences, or building meaningful relationships.</div>
                   </li>
                 </ol>
               </div>
