@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center py-3">
 
           {/* Left: Logo */}
-          <Link to="/" className=\"flex items-center gap-2 transition transform hover:scale-105\">
+          <Link to="/" className="flex items-center gap-2">
             <img
               src="/Portfolio/Favicon.jpeg" alt="Profile"
               className="h-10 w-10 object-cover rounded-full border border-gray-700"
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
             <li>
               <Link
                 to="/about"
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition transform hover:scale-105"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition"
               >
                 About
               </Link>
@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
             <li>
               <Link
                 to="/projects"
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition transform hover:scale-105"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition"
               >
                 Projects
               </Link>
@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
             <li>
               <Link
                 to="/contact"
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition transform hover:scale-105"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition"
               >
                 Contact
               </Link>

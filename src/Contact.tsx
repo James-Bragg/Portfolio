@@ -17,9 +17,9 @@ const Contact: React.FC = () => {
           </svg>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-            <div className="bg-gray-900 border border-gray-800 p-8 rounded-lg shadow-lg animate-slide-in-left\">
-              <h1 className=\"text-cyan-400 font-extrabold text-3xl mb-3 animate-fade-in-down\">Get in touch</h1>
-              <p className=\"text-gray-300 mb-6 animate-fade-in-up\" style={{animationDelay: '0.2s'}}>I'm available for freelance projects, contract work, and full-time roles. Reach out and I'll respond within 48 hours.</p>
+            <div className="bg-gray-900 border border-gray-800 p-8 rounded-lg shadow-lg animate-slide-in-left">
+              <h1 className="text-cyan-400 font-extrabold text-3xl mb-3 animate-fade-in-down">Get in touch</h1>
+              <p className="text-gray-300 mb-6 animate-fade-in-up" style={{animationDelay: '0.2s'}}>I'm available for freelance projects, contract work, and full-time roles. Reach out and I'll respond within 48 hours.</p>
 
               <a
                 href="mailto:jamesbragg01@outlook.com"
