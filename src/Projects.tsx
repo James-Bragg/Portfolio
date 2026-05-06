@@ -137,7 +137,6 @@ const Projects: React.FC = () => {
 										</div>
 
 										<div className="mt-4 text-xs text-gray-400">
-											Role: Full-stack · Year: 2024
 										</div>
 									</article>
 								))}
