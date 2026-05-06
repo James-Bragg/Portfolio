@@ -1,7 +1,6 @@
-import React from 'react';
 import { Link } from "react-router-dom";
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-100 py-12">
       <div className="max-w-5xl mx-auto px-6">
