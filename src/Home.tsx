@@ -22,8 +22,7 @@ const Home = () => {
                   Hi, I’m <span className="text-cyan-400">James Bragg</span>
                 </h1>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  I build polished, accessible interfaces and reliable backend services. I focus on performance,
-                  developer ergonomics and shipping features that solve real problems.
+                  I build polished, accessible interfaces and reliable backend services that deliver exceptional user experiences. With a passion for clean code and scalable architecture, I focus on performance optimization, developer ergonomics, and shipping features that solve real-world problems. My expertise spans modern web technologies, from responsive React applications to efficient data structures and algorithms, always prioritizing accessibility, security, and maintainability to create solutions that stand the test of time.
                 </p>
               </div>
 
@@ -48,15 +47,15 @@ const Home = () => {
               <div className="mt-4 grid sm:grid-cols-2 gap-4">
                 <div className="p-4 rounded-lg bg-gray-900 border border-gray-800 shadow">
                   <h4 className="text-cyan-300 font-semibold">Quick snapshot</h4>
-                  <p className="text-sm text-gray-300 mt-2">Software Engineer with 1<sup>st</sup> class Bsc in Computer Science from the University of Bedfordshire.
+                  <p className="text-sm text-gray-300 mt-2">Dedicated Software Engineer with a 1st Class BSc in Computer Science from the University of Bedfordshire. Passionate about leveraging technology to solve complex problems, with expertise in full-stack development and a commitment to delivering high-quality, user-centric solutions in fast-paced environments.
                   </p>
                 </div>
 
                 <div className="p-4 rounded-lg bg-gray-900 border border-gray-800 shadow">
                   <h4 className="text-cyan-300 font-semibold">Highlights</h4>
                   <ul className="text-sm text-gray-300 mt-2 space-y-1">
-                    <li>Using Frameworks such as React and Django.</li>
-                    <li>Building Projects using a wide range of technologies. For example, Python, SQL, AWS,</li>
+                    <li>Proficient in modern frameworks like React for dynamic user interfaces and Django for scalable backend services.</li>
+                    <li>Experienced in building full-stack applications using technologies such as Python, SQL databases, AWS cloud services, and containerization tools like Docker.</li>
                   </ul>
                 </div>
               </div>
