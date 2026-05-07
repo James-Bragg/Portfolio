@@ -33,6 +33,14 @@ const completedProjects: Project[] = [
 		repo: 'https://github.com/James-Bragg/Portfolio',
 		demo: 'https://james-bragg.github.io/Portfolio/#/projects',
 	},
+	{
+		title: 'Visual Sorting Algorithms',
+		description:
+			'A collaborative project that visualizes various sorting algorithms in real-time, allowing users to see how different algorithms work step-by-step. Built with Python using Pygame for graphics, Tkinter for GUI controls, and Pillow for image handling, with data persistence in a SQL database.',
+		tech: ['Python', 'Pygame', 'Tkinter', 'Pillow', 'SQL', 'Git'],
+		repo: 'https://github.com/James-Bragg/Y3-GroupProject',
+		demo: '#',
+	},
 ];
 
 const ongoingProjects: Project[] = [
@@ -55,10 +63,10 @@ const ongoingProjects: Project[] = [
 const Projects: React.FC = () => {
 	return (
 		<main className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-100 py-12">
-			<div className="max-w-5xl mx-auto px-6">
-				<div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-gray-900/60 via-gray-800/40 to-gray-900/60 border border-gray-800 p-8 shadow-2xl">
+			<div className="max-w-5xl mx-auto px-4 sm:px-6">
+				<div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-gray-900/60 via-gray-800/40 to-gray-900/60 border border-gray-800 p-6 sm:p-8 shadow-2xl">
 					<svg
-						className="pointer-events-none absolute -right-28 -top-28 opacity-10"
+						className="pointer-events-none absolute -right-28 -top-28 opacity-10 hidden sm:block"
 						width="420"
 						height="420"
 						viewBox="0 0 420 420"
@@ -81,10 +89,10 @@ const Projects: React.FC = () => {
 					</svg>
 
 					<header className="mb-8">
-						<h1 className="text-4xl font-extrabold text-cyan-200 leading-tight animate-fade-in-down">
+						<h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-cyan-200 leading-tight animate-fade-in-down">
 							My <span className="text-cyan-400">Projects</span>
 						</h1>
-						<p className="text-gray-300 text-lg leading-relaxed mt-4 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+						<p className="text-gray-300 text-base sm:text-lg leading-relaxed mt-4 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
 							Explore my portfolio of completed projects, spanning web applications, system programming, and general software development. Each project highlights innovative solutions, efficient algorithms, and a dedication to clean, maintainable code.
 						</p>
 					</header>
@@ -150,7 +158,7 @@ const Projects: React.FC = () => {
 
 					{/* Completed Projects Section */}
 					<section>
-						<h2 className="text-2xl font-bold text-green-200 mb-4">
+						<h2 className="text-xl sm:text-2xl font-bold text-green-200 mb-4">
 							Completed Projects
 						</h2>
 						<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -161,10 +169,10 @@ const Projects: React.FC = () => {
 								>
 									<div className="flex items-start justify-between gap-4">
 										<div>
-											<h3 className="text-lg font-semibold text-gray-100">
-												{p.title}
-											</h3>
-											<p className="text-sm text-gray-300 mt-2">
+										<h3 className="text-base sm:text-lg font-semibold text-gray-100">
+											{p.title}
+										</h3>
+										<p className="text-xs sm:text-sm text-gray-300 mt-2">
 												{p.description}
 											</p>
 
