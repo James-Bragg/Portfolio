@@ -22,7 +22,7 @@ const Home = () => {
                   Hi, I'm <span className="text-cyan-400">James Bragg</span>
                 </h1>
                 <p className="text-gray-300 text-base sm:text-lg leading-relaxed animate-fade-in-up transition-all duration-500" style={{animationDelay: '0.2s'}}>
-                  I build polished, accessible interfaces and reliable backend services that deliver exceptional user experiences. With a passion for clean code and scalable architecture, I focus on performance optimization, developer ergonomics, and shipping features that solve real-world problems. My expertise spans modern web technologies, from responsive React applications to efficient data structures and algorithms, always prioritizing accessibility, security, and maintainability to create solutions that stand the test of time.
+                  I build polished, accessible interfaces and reliable backend services that deliver exceptional user experiences. With a passion for clean code and scalable architecture, I focus on performance optimization, developer ergonomics. My expertise spans modern web technologies, from responsive React applications to efficient data structures and algorithms, always prioritizing accessibility, security, and maintainability to create solutions that stand the test of time.
                 </p>
               </div>
 

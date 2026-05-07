@@ -189,14 +189,16 @@ const Projects: React.FC = () => {
 										</div>
 
 										<div className="flex flex-col items-end gap-2">
-											<a
-												href={p.demo}
-												className="text-xs px-3 py-1 rounded-md bg-cyan-500 hover:bg-cyan-600 text-black font-medium transition"
-												target="_blank"
-												rel="noopener noreferrer"
-											>
-												Demo
-											</a>
+											{p.demo !== '#' && (
+												<a
+													href={p.demo}
+													className="text-xs px-3 py-1 rounded-md bg-cyan-500 hover:bg-cyan-600 text-black font-medium transition"
+													target="_blank"
+													rel="noopener noreferrer"
+												>
+													Demo
+												</a>
+											)}
 											<a
 												href={p.repo}
 												className="text-xs px-3 py-1 rounded-md bg-transparent border border-gray-700 hover:bg-gray-800 text-gray-200 transition"
