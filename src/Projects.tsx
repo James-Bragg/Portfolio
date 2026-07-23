@@ -34,6 +34,14 @@ const completedProjects: Project[] = [
 		demo: 'https://james-bragg.github.io/Portfolio/#/projects',
 	},
 	{
+		title: 'Local Business Website',
+		description:
+			'A customer-facing website for a local business that allows customers to view business information, contact the business, and create and manage service bookings online. It was built using a CMS so the client can easily manage and update content after launch.',
+		tech: ['CMS, HTML,'],
+		repo: '#',
+		demo: 'https://www.thaitawanmassage.co.uk/',
+	},
+	{
 		title: 'Visual Sorting Algorithms',
 		description:
 			'A collaborative project that visualizes various sorting algorithms in real-time, allowing users to see how different algorithms work step-by-step. Built with Python using Pygame for graphics, Tkinter for GUI controls, and Pillow for image handling, with data persistence in a SQL database.',
