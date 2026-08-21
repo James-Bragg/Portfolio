@@ -3,7 +3,7 @@ import React from 'react';
 interface Project {
 	title: string;
 	description: string;
-	tech: string[];
+	tech: string[]; 
 	repo: string;
 	demo: string;
 }
@@ -44,9 +44,23 @@ const completedProjects: Project[] = [
 	{
 		title: 'Visual Sorting Algorithms',
 		description:
-			'A collaborative project that visualizes various sorting algorithms in real-time, allowing users to see how different algorithms work step-by-step. Built with Python using Pygame for graphics, Tkinter for GUI controls, and Pillow for image handling, with data persistence in a SQL database.',
-		tech: ['Python', 'Pygame', 'Tkinter', 'Pillow', 'SQL', 'Git'],
+			'A collaborative project that visualizes various sorting algorithms in real-time, allowing users to see how different algorithms work step-by-step. Built with Python using Pygame for graphics, Tkinter for GUI controls, and Pillow for image handling, with data persistence in a SQL database. I was the project manager for this project, using effective agile and PRINCE2 methodologies to ensure deadlines and budgets were met.',
+		tech: ['Python', 'Pygame', 'Tkinter', 'Pillow', 'SQL', 'Git', 'Project Managment','PRINCE2', 'AGILE'],
 		repo: 'https://github.com/James-Bragg/Y3-GroupProject',
+		demo: '#',
+	},
+	{
+		title: 'Mathematical Game',
+		description: 'I created a mathematical quiz game for a university project, Using a range of technologies. This was created using JAVA as well as SQL Lite for database storage needs. Which allows users to create an account to store their own scores and user information. As well as a leaderboard that shows top users scores to allow for competition. I used my own custom GUI and game engine to handle the visuals and processing alike. Finally I used an API to get location data of users by obtaining and storing IPAdress from users.',
+		tech: ['JAVA', 'SQL', 'GUI','API', 'OOP'],
+		repo: '',
+		demo: '#',
+	},
+		{
+		title: '',
+		description: '',
+		tech: [],
+		repo: '',
 		demo: '#',
 	},
 ];
