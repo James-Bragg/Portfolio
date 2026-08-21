@@ -7,7 +7,7 @@ import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-200">
+    <div className="relative z-10 min-h-screen text-gray-200">
       <Navbar />
 
       <main className="max-w-6xl mx-auto px-4 py-6">
