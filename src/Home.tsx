@@ -22,7 +22,7 @@ const Home = () => {
                   Hi, I'm <span className="text-cyan-400">James Bragg</span>
                 </h1>
                 <p className="text-gray-300 text-base sm:text-lg leading-relaxed animate-fade-in-up transition-all duration-500" style={{animationDelay: '0.2s'}}>
-                  I am an aspiring software Engineer. I love building applications that provide great benefit to clients and developers alike. I enjoy all aspects of software Engineering, becoming proficient with both front end and back end development. Currently I am working as a freelance developer helping local clients on projects to solve their technical needs.
+                  I am a software Engineer. I love building applications that provide great benefit to clients and developers alike. I enjoy all aspects of software Engineering, becoming proficient with both front end and back end development. Currently I am working as a freelance developer helping local clients on projects to solve their technical needs.
                 </p>
               </div>
 
