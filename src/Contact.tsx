@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const Contact: React.FC = () => {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-100 py-12">
+    <main className="min-h-screen bg-linear-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-100 py-12">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-gray-900/60 via-gray-800/40 to-gray-900/60 border border-gray-800 p-6 sm:p-8 shadow-2xl">
+        <div className="relative overflow-hidden rounded-2xl bg-linear-to-r from-gray-900/60 via-gray-800/40 to-gray-900/60 border border-gray-800 p-6 sm:p-8 shadow-2xl">
           <svg className="pointer-events-none absolute -right-28 -top-28 opacity-10 hidden sm:block" width="420" height="420" viewBox="0 0 420 420" fill="none" aria-hidden>
             <defs>
               <linearGradient id="contactGrad" x1="0" x2="1">
@@ -23,7 +23,7 @@ const Contact: React.FC = () => {
 
               <a
                 href="mailto:jamesbragg01@outlook.com"
-                className="inline-flex items-center gap-3 bg-cyan-500 hover:bg-cyan-600 text-black px-4 py-3 min-h-[44px] rounded-md shadow transition transform hover:scale-105 animate-fade-in-up text-sm sm:text-base" style={{animationDelay: '0.3s'}}
+                className="inline-flex items-center gap-3 bg-cyan-500 hover:bg-cyan-600 text-black px-4 py-3 min-h-11 rounded-md shadow transition transform hover:scale-105 animate-fade-in-up text-sm sm:text-base" style={{animationDelay: '0.3s'}}
               >
                 <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" aria-hidden>
                   <path d="M2 6.5v11A2.5 2.5 0 0 0 4.5 20h15A2.5 2.5 0 0 0 22 17.5v-11A2.5 2.5 0 0 0 19.5 4h-15A2.5 2.5 0 0 0 2 6.5z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
                     href="https://www.linkedin.com/in/james-bragg-0a02a036a/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 px-4 py-3 min-h-[44px] rounded-md transition text-sm sm:text-base"
+                    className="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 px-4 py-3 min-h-11 rounded-md transition text-sm sm:text-base"
                   >
                     <svg className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400" viewBox="0 0 24 24" fill="none" aria-hidden>
                       <path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v6h-4v-12h4v2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
                     href="https://github.com/James-Bragg"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 px-4 py-3 min-h-[44px] rounded-md transition text-sm sm:text-base"
+                    className="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 px-4 py-3 min-h-11 rounded-md transition text-sm sm:text-base"
                   >
                     <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" aria-hidden>
                       <path d="M12 2C7.03 2 3 6.03 3 11c0 4 2.87 7.37 6.84 8.56.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.6-3.37-1.19-3.37-1.19-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.64-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.26.1-2.62 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85.004 1.71.115 2.5.338 1.9-1.29 2.74-1.02 2.74-1.02.55 1.36.2 2.37.1 2.62.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.69.92.69 1.85 0 1.33-.01 2.4-.01 2.73 0 .26.18.58.69.48A9.02 9.02 0 0 0 21 11c0-4.97-4.03-9-9-9z" stroke="currentColor" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
                 <li>
                   <Link
                     to="/projects"
-                    className="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 px-4 py-3 min-h-[44px] rounded-md transition text-sm sm:text-base"
+                    className="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 px-4 py-3 min-h-11 rounded-md transition text-sm sm:text-base"
                   >
                     <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" aria-hidden>
                       <path d="M12 2l3 6 6 .5-4.5 3.8L18 22l-6-3.5L6 22l1.5-9.7L3 8.5 9 8z" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round"/>

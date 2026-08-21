@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-100 py-12">
+    <main className="min-h-screen bg-linear-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-100 py-12">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-gray-900/60 via-gray-800/40 to-gray-900/60 border border-gray-800 p-6 sm:p-8 shadow-2xl">
+        <div className="relative overflow-hidden rounded-2xl bg-linear-to-r from-gray-900/60 via-gray-800/40 to-gray-900/60 border border-gray-800 p-6 sm:p-8 shadow-2xl">
           <svg className="pointer-events-none absolute -right-28 -top-28 opacity-10 hidden sm:block" width="420" height="420" viewBox="0 0 420 420" fill="none" aria-hidden>
             <defs>
               <linearGradient id="g2" x1="0" x2="1">
@@ -22,7 +22,7 @@ const Home = () => {
                   Hi, I'm <span className="text-cyan-400">James Bragg</span>
                 </h1>
                 <p className="text-gray-300 text-base sm:text-lg leading-relaxed animate-fade-in-up transition-all duration-500" style={{animationDelay: '0.2s'}}>
-                  I build polished, accessible interfaces and reliable backend services that deliver exceptional user experiences. With a passion for clean code and scalable architecture, I focus on performance optimization, developer ergonomics. My expertise spans modern web technologies, from responsive React applications to efficient data structures and algorithms, always prioritizing accessibility, security, and maintainability to create solutions that stand the test of time.
+                  I am an aspiring software Engineer. I love building applications that provide great benefit to clients and developers alike. I enjoy all aspects of software Engineering, becoming proficient with both front end and back end development. Currently I am working as a freelance developer helping local clients on projects to solve their technical needs.
                 </p>
               </div>
 

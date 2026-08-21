@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const About: React.FC = () => {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-100 py-12">
+    <main className="min-h-screen bg-linear-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-100 py-12">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-gray-900/60 via-gray-800/40 to-gray-900/60 border border-gray-800 p-6 sm:p-8 shadow-2xl">
+        <div className="relative overflow-hidden rounded-2xl bg-linear-to-r from-gray-900/60 via-gray-800/40 to-gray-900/60 border border-gray-800 p-6 sm:p-8 shadow-2xl">
           <svg className="pointer-events-none absolute -right-20 -top-24 opacity-10 hidden sm:block" width="420" height="420" viewBox="0 0 420 420" fill="none" aria-hidden>
             <defs>
               <linearGradient id="g" x1="0" x2="1">
@@ -96,7 +96,7 @@ const About: React.FC = () => {
                 </div>
               </div>
 
-              <div className="mt-2 p-4 rounded-lg bg-gradient-to-r from-gray-900/40 to-gray-800/30 border border-gray-800 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+              <div className="mt-2 p-4 rounded-lg bg-linear-to-r from-gray-900/40 to-gray-800/30 border border-gray-800 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
                 <h4 className="font-semibold text-cyan-300 mb-3 text-sm sm:text-base">Outside of the Tech Industry</h4>
                 <ol className="relative border-l border-gray-800 ml-2 pl-4 space-y-6 text-xs sm:text-sm text-gray-300">
                   <li className="relative">
