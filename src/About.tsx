@@ -60,7 +60,7 @@ const About: React.FC = () => {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-                <div className="p-4 rounded-lg bg-gray-900 border border-gray-800 shadow transition hover:shadow-lg transform hover:scale-105 hover:-translate-y-1">
+                <div className="p-4 rounded-lg bg-gray-900 border border-gray-800 shadow animate-card-reveal transition hover:shadow-lg transform hover:scale-[1.02] hover:-translate-y-1">
                   <h4 className="font-semibold text-cyan-300 text-sm sm:text-base">Technical Skills</h4>
                   <div className="mt-3 flex flex-wrap gap-2">
                     {['React', 'JavaScript', 'Tailwind', 'SQL', 'Python', 'Django', 'Git', 'GitHub', 'REST', 'AWS', 'RUST', 'Agile', 'PRINCE2', 'Project Management', 'Team Leadership', 'Problem Solving'].map(skill => (
@@ -69,7 +69,7 @@ const About: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="p-4 rounded-lg bg-gray-900 border border-gray-800 shadow transition hover:shadow-lg transform hover:scale-105 hover:-translate-y-1">
+                <div className="p-4 rounded-lg bg-gray-900 border border-gray-800 shadow animate-card-reveal transition hover:shadow-lg transform hover:scale-[1.02] hover:-translate-y-1">
                   <h4 className="font-semibold text-cyan-300 text-sm sm:text-base">Experience</h4>
                   <ol className="relative border-l border-gray-800 ml-2 pl-4 space-y-6 text-xs sm:text-sm text-gray-300">
                   <li className="relative">

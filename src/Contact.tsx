@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
           </svg>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-start">
-            <div className="bg-gray-900 border border-gray-800 p-6 sm:p-8 rounded-lg shadow-lg animate-slide-in-left">
+            <div className="bg-gray-900 border border-gray-800 p-6 sm:p-8 rounded-lg shadow-lg animate-slide-in-left transition hover:-translate-y-1 hover:shadow-xl">
               <h1 className="text-cyan-400 font-extrabold text-2xl sm:text-3xl mb-3 animate-fade-in-down">Get in touch</h1>
               <p className="text-gray-300 text-base sm:text-lg mb-6 animate-fade-in-up" style={{animationDelay: '0.2s'}}>I'm available for freelance projects, contract work, and full-time roles. Reach out and I'll respond within 24 hours.</p>
 
@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-gray-900 border border-gray-800 p-6 sm:p-8 rounded-lg shadow-lg animate-slide-in-right">
+            <div className="bg-gray-900 border border-gray-800 p-6 sm:p-8 rounded-lg shadow-lg animate-slide-in-right transition hover:-translate-y-1 hover:shadow-xl">
               <h2 className="text-cyan-300 font-bold text-xl sm:text-2xl mb-4 animate-fade-in-down" style={{animationDelay: '0.2s'}}>Socials & links</h2>
               <p className="text-gray-300 text-base sm:text-lg mb-4 animate-fade-in-up" style={{animationDelay: '0.3s'}}>Connect with me on these platforms or view my work.</p>
 

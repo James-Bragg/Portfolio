@@ -23,7 +23,7 @@ body::before {
 		radial-gradient(circle at 85% 75%, rgb(124 58 237 / 0.14), transparent 30%),
 		linear-gradient(120deg, #030712 0%, #0e7490 32%, #312e81 62%, #030712 100%);
 	background-size: 140% 140%, 150% 150%, 300% 300%;
-	animation: ambient-drift 18s ease-in-out infinite alternate;
+	animation: ambient-drift 26s ease-in-out infinite alternate;
 }
 
 body::after {
@@ -36,7 +36,7 @@ body::after {
 		linear-gradient(90deg, rgb(34 211 238 / 0.08) 1px, transparent 1px);
 	background-size: 140% 100%, 120% 100%, 42px 42px, 42px 42px;
 	mask-image: linear-gradient(to bottom, black, transparent 82%);
-	animation: wave-drift 20s ease-in-out infinite alternate;
+	animation: wave-drift 30s ease-in-out infinite alternate;
 }
 
 @keyframes ambient-drift {
@@ -61,6 +61,15 @@ body::after {
 	body::before,
 	body::after {
 		animation: none;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
 	}
 }
 

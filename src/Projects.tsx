@@ -23,22 +23,14 @@ const completedProjects: Project[] = [
 			'A Forum/Social media platform built to allow student collaboration across universities to allow for greater developed of social skills and collaboration.',
 		tech: ['HTML', 'CSS', 'JAVAScript', 'Python', 'Django', 'AWS', 'SQL', 'Git'],
 		repo: 'https://github.com/James-Bragg/StudentSocialWeb',
-		demo: '#',
-	},
-	{
-		title: 'This Portfolio Site',
-		description:
-			'A personal portfolio website to showcase my projects and skills as a software developer.',
-		tech: ['REACT', 'TAILWIND', 'TypeScript', 'VITE', 'Git', 'GitHub-Pages'],
-		repo: 'https://github.com/James-Bragg/Portfolio',
-		demo: 'https://james-bragg.github.io/Portfolio/#/projects',
+		demo: '',
 	},
 	{
 		title: 'Local Business Website',
 		description:
 			'A customer-facing website for a local business that allows customers to view business information, contact the business, and create and manage service bookings online. It was built using a CMS so the client can easily manage and update content after launch.',
 		tech: ['CMS, HTML,'],
-		repo: '#',
+		repo: '',
 		demo: 'https://www.thaitawanmassage.co.uk/',
 	},
 	{
@@ -47,21 +39,21 @@ const completedProjects: Project[] = [
 			'A collaborative project that visualizes various sorting algorithms in real-time, allowing users to see how different algorithms work step-by-step. Built with Python using Pygame for graphics, Tkinter for GUI controls, and Pillow for image handling, with data persistence in a SQL database. I was the project manager for this project, using effective agile and PRINCE2 methodologies to ensure deadlines and budgets were met.',
 		tech: ['Python', 'Pygame', 'Tkinter', 'Pillow', 'SQL', 'Git', 'Project Managment','PRINCE2', 'AGILE'],
 		repo: 'https://github.com/James-Bragg/Y3-GroupProject',
-		demo: '#',
+		demo: '',
 	},
 	{
 		title: 'Mathematical Game',
 		description: 'I created a mathematical quiz game for a university project, Using a range of technologies. This was created using JAVA as well as SQL Lite for database storage needs. Which allows users to create an account to store their own scores and user information. As well as a leaderboard that shows top users scores to allow for competition. I used my own custom GUI and game engine to handle the visuals and processing alike. Finally I used an API to get location data of users by obtaining and storing IPAdress from users.',
 		tech: ['JAVA', 'SQL', 'GUI','API', 'OOP'],
 		repo: '',
-		demo: '#',
+		demo: '',
 	},
 		{
-		title: '',
-		description: '',
-		tech: [],
+		title: 'Student Kiosk System',
+		description: '• Co-developed a web-based kiosk application for the University of Bedfordshire, enabling students, staff, and local businesses to view and book campus events and services. • Built the application on Oracle APEX with a SQL back-end. • Led market research and requirements gathering, including a student questionnaire, and applied Scrum sprints and Soft Systems Methodology, including CATWOE, to define functional, non-functional and stakeholder requirements • Designed and built the SQL database, including triggers, sequences and normalized table structures. • Developed authentication and authorization features, including secure password hashing.',
+		tech: ['Oracle','SQL'],
 		repo: '',
-		demo: '#',
+		demo: '',
 	},
 ];
 
@@ -82,7 +74,31 @@ const ongoingProjects: Project[] = [
 	},
 ];
 
+const createRandomTitleColor = (usedColors: Set<string>) => {
+	let color: string;
+	do {
+		const hue = Math.floor(Math.random() * 360);
+		const saturation = Math.floor(Math.random() * 21) + 70;
+		const lightness = Math.floor(Math.random() * 16) + 65;
+		color = `hsl(${hue} ${saturation}% ${lightness}%)`;
+	} while (usedColors.has(color));
+
+	usedColors.add(color);
+	return color;
+};
+
 const Projects: React.FC = () => {
+	const [titleColors] = React.useState<Record<string, string>>(() => {
+		const usedColors = new Set<string>();
+
+		return Object.fromEntries(
+			[...ongoingProjects, ...completedProjects].map((project) => [
+				project.title,
+				createRandomTitleColor(usedColors),
+			]),
+		);
+	});
+
 	return (
 		<main className="min-h-screen rounded-2xl overflow-hidden bg-linear-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-100 py-12">
 			<div className="max-w-5xl mx-auto px-4 sm:px-6">
@@ -129,11 +145,14 @@ const Projects: React.FC = () => {
 								{ongoingProjects.map((p) => (
 									<article
 										key={p.title}
-										className="group relative bg-gray-900 border border-gray-800 p-5 rounded-lg shadow hover:shadow-xl transition"
+										className="group relative bg-gray-900 border border-gray-800 p-5 rounded-lg shadow hover:shadow-xl transition animate-card-reveal hover:-translate-y-1"
 									>
 										<div className="flex items-start justify-between gap-4">
 											<div>
-												<h3 className="text-lg font-semibold text-gray-100">
+														<h3
+															className="text-lg font-semibold"
+															style={{ color: titleColors[p.title] }}
+														>
 													{p.title}
 												</h3>
 												<p className="text-sm text-gray-300 mt-2">
@@ -153,7 +172,7 @@ const Projects: React.FC = () => {
 											</div>
 
 											<div className="flex flex-col items-end gap-2">
-												{p.demo !== '#' && (
+												{p.demo && p.demo !== '#' && (
 													<a
 														href={p.demo}
 														className="text-xs px-3 py-1 rounded-md bg-cyan-500 hover:bg-cyan-600 text-black font-medium transition"
@@ -187,16 +206,27 @@ const Projects: React.FC = () => {
 							{completedProjects.map((p) => (
 								<article
 									key={p.title}
-									className="group relative bg-gray-900 border border-gray-800 p-5 rounded-lg shadow hover:shadow-xl transition"
+									className="group relative bg-gray-900 border border-gray-800 p-5 rounded-lg shadow hover:shadow-xl transition animate-card-reveal hover:-translate-y-1"
 								>
 									<div className="flex items-start justify-between gap-4">
 										<div>
-										<h3 className="text-base sm:text-lg font-semibold text-gray-100">
+										<h3
+											className="text-base sm:text-lg font-semibold"
+											style={{ color: titleColors[p.title] }}
+										>
 											{p.title}
 										</h3>
-										<p className="text-xs sm:text-sm text-gray-300 mt-2">
+										{p.description.includes(' • ') ? (
+											<ul className="text-xs sm:text-sm text-gray-300 mt-2 list-disc list-inside space-y-1">
+												{p.description.split(' • ').map((point) => (
+													<li key={point}>{point.replace(/^•\s*/, '')}</li>
+												))}
+											</ul>
+										) : (
+											<p className="text-xs sm:text-sm text-gray-300 mt-2">
 												{p.description}
 											</p>
+										)}
 
 											<div className="mt-3 flex flex-wrap gap-2">
 												{p.tech.map((t) => (
@@ -211,7 +241,7 @@ const Projects: React.FC = () => {
 										</div>
 
 										<div className="flex flex-col items-end gap-2">
-											{p.demo !== '#' && (
+											{p.demo && p.demo !== '#' && (
 												<a
 													href={p.demo}
 													className="text-xs px-3 py-1 rounded-md bg-cyan-500 hover:bg-cyan-600 text-black font-medium transition"
@@ -221,14 +251,16 @@ const Projects: React.FC = () => {
 													Demo
 												</a>
 											)}
-											<a
-												href={p.repo}
-												className="text-xs px-3 py-1 rounded-md bg-transparent border border-gray-700 hover:bg-gray-800 text-gray-200 transition"
-												target="_blank"
-												rel="noopener noreferrer"
-											>
-												Repo
-											</a>
+											{p.repo && p.repo !== '#' && (
+												<a
+													href={p.repo}
+													className="text-xs px-3 py-1 rounded-md bg-transparent border border-gray-700 hover:bg-gray-800 text-gray-200 transition"
+													target="_blank"
+													rel="noopener noreferrer"
+												>
+													Repo
+												</a>
+											)}
 										</div>
 									</div>
 								</article>

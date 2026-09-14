@@ -45,13 +45,13 @@ const Home = () => {
               </div>
 
               <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
-                <div className="p-4 rounded-lg bg-gray-900 border border-gray-800 shadow">
+                <div className="p-4 rounded-lg bg-gray-900 border border-gray-800 shadow animate-card-reveal transition hover:-translate-y-1 hover:shadow-lg">
                   <h4 className="text-cyan-300 font-semibold text-sm sm:text-base">Quick snapshot</h4>
                   <p className="text-xs sm:text-sm text-gray-300 mt-2">Dedicated Software Engineer with a 1st Class BSc in Computer Science from the University of Bedfordshire. Passionate about leveraging technology to solve complex problems, with expertise in full-stack development and a commitment to delivering high-quality, user-centric solutions in fast-paced environments.
                   </p>
                 </div>
 
-                <div className="p-4 rounded-lg bg-gray-900 border border-gray-800 shadow">
+                <div className="p-4 rounded-lg bg-gray-900 border border-gray-800 shadow animate-card-reveal transition hover:-translate-y-1 hover:shadow-lg">
                   <h4 className="text-cyan-300 font-semibold text-sm sm:text-base">Highlights</h4>
                   <ul className="text-xs sm:text-sm text-gray-300 mt-2 space-y-1">
                     <li>Proficient in modern frameworks like React for dynamic user interfaces and Django for scalable backend services.</li>
@@ -63,7 +63,7 @@ const Home = () => {
 
             <aside className="md:col-span-1 flex flex-col items-center text-center">
               <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-cyan-500 shadow-lg transform transition hover:scale-[1.03] animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-                <img src="/Portfolio/James.png" alt="James Bragg" className="w-full h-full object-cover" />
+                <img src="/Portfolio/James.png" alt="James Bragg" className="w-full h-full object-cover animate-soft-float" />
               </div>
 
               <div className="mt-4 w-full bg-gray-850/10 border border-gray-800 rounded-lg p-3 text-left">
