@@ -1,278 +1,180 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import { Chip, Icon, PageHeader, Reveal, SectionLabel } from './components';
+import { ongoing, projects } from './data';
+import type { Category, Project } from './data';
+import { trackPointer } from './lib';
 
-interface Project {
-	title: string;
-	description: string;
-	tech: string[]; 
-	repo: string;
-	demo: string;
+const filters: ('All' | Category)[] = ['All', 'Web', 'Python', 'Rust', 'Machine Learning', 'Team'];
+
+function ProjectRow({ project, index, open, onToggle }: { project: Project; index: number; open: boolean; onToggle: () => void }) {
+  const panelId = `project-${project.slug}`;
+
+  return (
+    <article id={project.slug} onMouseMove={trackPointer} className={`card spotlight scroll-mt-24 transition-colors duration-300 ${open ? 'border-accent/30' : ''}`}>
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-expanded={open}
+        aria-controls={panelId}
+        className="group grid w-full grid-cols-[auto_1fr_auto] items-start gap-4 p-5 text-left sm:gap-6 sm:p-7"
+      >
+        <span className="pt-1 font-mono text-xs text-subtle">{String(index + 1).padStart(2, '0')}</span>
+        <span>
+          <span className="label block">{project.kicker}</span>
+          <span className="mt-2 block font-display text-xl font-semibold tracking-tight transition-colors group-hover:text-accent sm:text-2xl">
+            {project.title}
+          </span>
+          <span className="mt-2 block max-w-2xl text-sm leading-relaxed text-muted sm:text-base">{project.summary}</span>
+          <span className="mt-4 flex flex-wrap gap-1.5">
+            {project.tech.map(t => (
+              <Chip key={t}>{t}</Chip>
+            ))}
+          </span>
+        </span>
+        <span
+          className={`grid h-9 w-9 place-items-center rounded-full border transition duration-500 ${
+            open ? 'rotate-45 border-accent bg-accent text-ink-950' : 'border-ink-600 text-muted group-hover:border-accent group-hover:text-accent'
+          }`}
+          aria-hidden
+        >
+          <Icon name="plus" />
+        </span>
+      </button>
+
+      <div id={panelId} className="collapse-grid" data-open={open} inert={!open}>
+        <div className="overflow-hidden">
+          <div className="border-t border-ink-700/80 px-5 pb-6 pt-5 sm:ml-[3.25rem] sm:px-7">
+            <ul className="space-y-2.5 text-sm leading-relaxed text-muted sm:text-base">
+              {project.points.map(point => (
+                <li key={point} className="flex gap-3">
+                  <span className="mt-2.5 h-px w-3 shrink-0 bg-accent" aria-hidden />
+                  {point}
+                </li>
+              ))}
+            </ul>
+            {(project.demo || project.repo) && (
+              <div className="mt-6 flex flex-wrap gap-3">
+                {project.demo && (
+                  <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                    Visit live site
+                    <Icon name="arrow-up-right" />
+                  </a>
+                )}
+                {project.repo && (
+                  <a href={project.repo} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+                    View source
+                    <Icon name="arrow-up-right" />
+                  </a>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </article>
+  );
 }
 
-const completedProjects: Project[] = [
-	{
-		title: 'Host Death Link',
-		description:
-			'• An Elden Ring Seamless Co-op add-on written in Rust: when the host dies, every other player in the session dies too. • Built as a native Windows DLL loaded through ModEngine2, hooking into game state via the fromsoftware-rs crates. • Per-player TOML configuration identifies the host, including sessions with three or more players. • Catches panics in the main loop so errors never crash the game.',
-		tech: ['Rust', 'Windows API', 'DLL', 'Game Modding', 'Git'],
-		repo: 'https://github.com/James-Bragg/hostdeath-link',
-		demo: '',
-	},
-	{
-		title: 'Local Business Website',
-		description:
-			'• Freelance project: designed, built and deployed a bespoke business website for a local client using Wix. • Implemented an online booking system, service catalogue, and clear location and contact information. • Responsive design for desktop and mobile, configured as a CMS so the client can update content independently. • Managed the full project lifecycle, from requirements gathering and client communication through to deployment.',
-		tech: ['Wix', 'CMS', 'Responsive Design', 'Client Management'],
-		repo: '',
-		demo: 'https://www.thaitawanmassage.co.uk/',
-	},
-	{
-		title: 'Cloud Computing for E-learning (Dissertation)',
-		description:
-			'• Designed and built a cloud-based social media and forum platform for e-learning, based on research into gaps in peer-collaboration tools during remote learning. • Role-based access for Students, Teachers and Admins, including forum creation/moderation, user profiles and direct messaging. • Python/Django back end with a MySQL database, and an HTML, CSS and JavaScript front end. • Deployed and configured a cloud-hosted MySQL database on AWS with access control for secure remote connections. • Led the end-to-end SDLC: requirements gathering, competitor analysis, design, development and testing.',
-		tech: ['Python', 'Django', 'MySQL', 'AWS', 'HTML', 'CSS', 'JavaScript', 'Git'],
-		repo: 'https://github.com/James-Bragg/StudentSocialWeb',
-		demo: '',
-	},
-	{
-		title: 'Facial Recognition using Machine Learning',
-		description:
-			'• Improved model accuracy from an 89% baseline to a 97% average, with a peak of 99%, through systematic hyperparameter tuning. • Tuned batch size, solver selection, principal components and hidden neuron count. • Built with Python and scikit-learn (MLPClassifier) on Google Colab using artificial neural networks.',
-		tech: ['Python', 'scikit-learn', 'Neural Networks', 'Google Colab'],
-		repo: '',
-		demo: '',
-	},
-	{
-		title: 'Algorithm Visualizer',
-		description:
-			'• Group project: a GUI-based Python application that visualizes sorting algorithms and compares their execution speed. • Led the team from initiation to completion as Project Manager, applying PRINCE2 principles to deliver on schedule. • Managed scope, timelines and responsibilities with Gantt charts and regular team meetings to track progress and resolve blockers. • Built using Python, SQL and the Tkinter GUI library.',
-		tech: ['Python', 'Tkinter', 'Pygame', 'Pillow', 'SQLite', 'Git', 'PRINCE2', 'Project Management'],
-		repo: 'https://github.com/James-Bragg/Y3-GroupProject',
-		demo: '',
-	},
-	{
-		title: 'Student Kiosk System',
-		description: '• Co-developed a web-based kiosk application for the University of Bedfordshire, enabling students, staff, and local businesses to view and book campus events and services. • Built the application on Oracle APEX with a SQL back-end. • Led market research and requirements gathering, including a student questionnaire, and applied Scrum sprints and Soft Systems Methodology, including CATWOE, to define functional, non-functional and stakeholder requirements. • Designed and built the SQL database, including triggers, sequences and normalised table structures. • Developed authentication and authorisation features, including secure password hashing.',
-		tech: ['Oracle APEX', 'SQL', 'Scrum'],
-		repo: '',
-		demo: '',
-	},
-	{
-		title: 'DnD Companion',
-		description:
-			'Manage combat encounters with the built-in initiative tracker, as well as saving players and their initiative bonuses.',
-		tech: ['HTML', 'CSS', 'JavaScript', 'Git'],
-		repo: 'https://github.com/James-Bragg/DnD-Initiative-Tracker',
-		demo: 'https://james-bragg.github.io/DnD-Initiative-Tracker/',
-	},
-];
-
-const ongoingProjects: Project[] = [
-	{
-		title: 'Learning Rust',
-		description: 'Continuing to develop my Rust and systems programming skills, building on projects like Host Death Link.',
-		tech: ['Rust', 'Systems Programming'],
-		repo: '#',
-		demo: '#',
-	},
-];
-
-const createRandomTitleColor = (usedColors: Set<string>) => {
-	let color: string;
-	do {
-		const hue = Math.floor(Math.random() * 360);
-		const saturation = Math.floor(Math.random() * 21) + 70;
-		const lightness = Math.floor(Math.random() * 16) + 65;
-		color = `hsl(${hue} ${saturation}% ${lightness}%)`;
-	} while (usedColors.has(color));
-
-	usedColors.add(color);
-	return color;
-};
-
 const Projects: React.FC = () => {
-	const [titleColors] = React.useState<Record<string, string>>(() => {
-		const usedColors = new Set<string>();
+  const location = useLocation();
+  const requested = (location.state as { open?: string } | null)?.open;
+  const [filter, setFilter] = useState<(typeof filters)[number]>('All');
+  const [openSlugs, setOpenSlugs] = useState<Set<string>>(() => new Set(requested ? [requested] : []));
 
-		return Object.fromEntries(
-			[...ongoingProjects, ...completedProjects].map((project) => [
-				project.title,
-				createRandomTitleColor(usedColors),
-			]),
-		);
-	});
+  // Arriving from a featured card on the home page: scroll to that project.
+  useEffect(() => {
+    if (!requested) return;
+    const id = window.setTimeout(() => document.getElementById(requested)?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 250);
+    return () => window.clearTimeout(id);
+  }, [requested]);
 
-	return (
-		<main className="min-h-screen rounded-2xl overflow-hidden bg-linear-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-100 py-12">
-			<div className="max-w-5xl mx-auto px-4 sm:px-6">
-				<div className="relative overflow-hidden rounded-2xl bg-linear-to-r from-gray-900/60 via-gray-800/40 to-gray-900/60 border border-gray-800 p-6 sm:p-8 shadow-2xl">
-					<svg
-						className="pointer-events-none absolute -right-28 -top-28 opacity-10 hidden sm:block"
-						width="420"
-						height="420"
-						viewBox="0 0 420 420"
-						fill="none"
-						aria-hidden
-					>
-						<defs>
-							<linearGradient id="projectsGrad" x1="0" x2="1">
-								<stop offset="0" stopColor="#06b6d4" />
-								<stop offset="1" stopColor="#7c3aed" />
-							</linearGradient>
-						</defs>
-						<circle
-							cx="210"
-							cy="210"
-							r="200"
-							stroke="url(#projectsGrad)"
-							strokeWidth="2"
-						/>
-					</svg>
+  const visible = filter === 'All' ? projects : projects.filter(p => p.categories.includes(filter));
 
-					<header className="mb-8">
-						<h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-cyan-200 leading-tight animate-fade-in-down">
-							My <span className="text-cyan-400">Projects</span>
-						</h1>
-						<p className="text-gray-300 text-base sm:text-lg leading-relaxed mt-4 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-							Projects from my freelance work, university degree and personal interests, spanning web applications, cloud computing, machine learning, and systems programming in Rust.
-						</p>
-					</header>
+  const toggle = (slug: string) =>
+    setOpenSlugs(prev => {
+      const next = new Set(prev);
+      if (next.has(slug)) next.delete(slug);
+      else next.add(slug);
+      return next;
+    });
 
-					{/* Ongoing Projects Section */}
-					<section className="mb-12">
-						<h2 className="text-2xl font-bold text-purple-200 mb-4">
-							Ongoing Projects
-						</h2>
-						{ongoingProjects.length > 0 ? (
-							<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-								{ongoingProjects.map((p) => (
-									<article
-										key={p.title}
-										className="group relative bg-gray-900 border border-gray-800 p-5 rounded-lg shadow hover:shadow-xl transition animate-card-reveal hover:-translate-y-1"
-									>
-										<div className="flex items-start justify-between gap-4">
-											<div>
-														<h3
-															className="text-lg font-semibold"
-															style={{ color: titleColors[p.title] }}
-														>
-													{p.title}
-												</h3>
-												<p className="text-sm text-gray-300 mt-2">
-													{p.description}
-												</p>
+  return (
+    <>
+      <PageHeader
+        index="02"
+        label="Projects"
+        title={
+          <>
+            Selected work, <span className="text-gradient">start to ship.</span>
+          </>
+        }
+        lead="Projects from my freelance work, university degree and personal interests, spanning web applications, cloud computing, machine learning, and systems programming in Rust. Select a project to see the details."
+      />
 
-												<div className="mt-3 flex flex-wrap gap-2">
-													{p.tech.map((t) => (
-														<span
-															key={t}
-															className="text-xs px-2 py-1 rounded-full bg-gray-800/60 text-gray-200"
-														>
-															{t}
-														</span>
-													))}
-												</div>
-											</div>
+      <Reveal>
+        <div className="flex flex-wrap gap-2" role="group" aria-label="Filter projects">
+          {filters.map(f => {
+            const count = f === 'All' ? projects.length : projects.filter(p => p.categories.includes(f)).length;
+            const active = filter === f;
+            return (
+              <button
+                key={f}
+                type="button"
+                onClick={() => setFilter(f)}
+                aria-pressed={active}
+                className={`inline-flex min-h-10 items-center gap-2 rounded-full border px-4 text-sm transition-colors duration-300 ${
+                  active ? 'border-accent bg-accent text-ink-950' : 'border-ink-600 text-muted hover:border-subtle hover:text-fg'
+                }`}
+              >
+                {f}
+                <span className={`font-mono text-xs ${active ? 'text-ink-950/70' : 'text-subtle'}`}>{count}</span>
+              </button>
+            );
+          })}
+        </div>
+      </Reveal>
 
-											<div className="flex flex-col items-end gap-2">
-												{p.demo && p.demo !== '#' && (
-													<a
-														href={p.demo}
-														className="text-xs px-3 py-1 rounded-md bg-cyan-500 hover:bg-cyan-600 text-black font-medium transition"
-														target="_blank"
-														rel="noopener noreferrer"
-													>
-														Demo
-													</a>
-												)}
-											</div>
-										</div>
+      <div className="mt-8 space-y-4">
+        {visible.map((project, i) => (
+          <Reveal key={project.slug} delay={Math.min(i, 5) * 60}>
+            <ProjectRow
+              project={project}
+              index={projects.indexOf(project)}
+              open={openSlugs.has(project.slug)}
+              onToggle={() => toggle(project.slug)}
+            />
+          </Reveal>
+        ))}
+      </div>
 
-										<div className="mt-4 text-xs text-gray-400">
-										</div>
-									</article>
-								))}
-							</div>
-						) : (
-							<p className="text-gray-400 italic">
-								No ongoing projects at the moment.
-							</p>
-						)}
-					</section>
-
-					{/* Completed Projects Section */}
-					<section>
-						<h2 className="text-xl sm:text-2xl font-bold text-green-200 mb-4">
-							Completed Projects
-						</h2>
-						<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-							{completedProjects.map((p) => (
-								<article
-									key={p.title}
-									className="group relative bg-gray-900 border border-gray-800 p-5 rounded-lg shadow hover:shadow-xl transition animate-card-reveal hover:-translate-y-1"
-								>
-									<div className="flex items-start justify-between gap-4">
-										<div>
-										<h3
-											className="text-base sm:text-lg font-semibold"
-											style={{ color: titleColors[p.title] }}
-										>
-											{p.title}
-										</h3>
-										{p.description.includes(' • ') ? (
-											<ul className="text-xs sm:text-sm text-gray-300 mt-2 list-disc list-inside space-y-1">
-												{p.description.split(' • ').map((point) => (
-													<li key={point}>{point.replace(/^•\s*/, '')}</li>
-												))}
-											</ul>
-										) : (
-											<p className="text-xs sm:text-sm text-gray-300 mt-2">
-												{p.description}
-											</p>
-										)}
-
-											<div className="mt-3 flex flex-wrap gap-2">
-												{p.tech.map((t) => (
-													<span
-														key={t}
-														className="text-xs px-2 py-1 rounded-full bg-gray-800/60 text-gray-200"
-													>
-														{t}
-													</span>
-												))}
-											</div>
-										</div>
-
-										<div className="flex flex-col items-end gap-2">
-											{p.demo && p.demo !== '#' && (
-												<a
-													href={p.demo}
-													className="text-xs px-3 py-1 rounded-md bg-cyan-500 hover:bg-cyan-600 text-black font-medium transition"
-													target="_blank"
-													rel="noopener noreferrer"
-												>
-													Demo
-												</a>
-											)}
-											{p.repo && p.repo !== '#' && (
-												<a
-													href={p.repo}
-													className="text-xs px-3 py-1 rounded-md bg-transparent border border-gray-700 hover:bg-gray-800 text-gray-200 transition"
-													target="_blank"
-													rel="noopener noreferrer"
-												>
-													Repo
-												</a>
-											)}
-										</div>
-									</div>
-								</article>
-							))}
-						</div>
-					</section>
-				</div>
-			</div>
-		</main>
-	);
+      <section className="mt-24">
+        <Reveal>
+          <SectionLabel index="→">In progress</SectionLabel>
+          <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight">What I’m working on now</h2>
+        </Reveal>
+        <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
+          {ongoing.map(item => (
+            <Reveal key={item.title}>
+              <div className="card h-full border-dashed p-6">
+                <div className="flex items-center gap-2 font-mono text-xs text-accent">
+                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" aria-hidden />
+                  in progress
+                </div>
+                <h3 className="mt-3 font-display text-xl font-semibold">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{item.text}</p>
+                <div className="mt-4 flex flex-wrap gap-1.5">
+                  {item.tech.map(t => (
+                    <Chip key={t}>{t}</Chip>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+    </>
+  );
 };
 
 export default Projects;
