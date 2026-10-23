@@ -22,7 +22,7 @@ const Home = () => {
                   Hi, I'm <span className="text-cyan-400">James Bragg</span>
                 </h1>
                 <p className="text-gray-300 text-base sm:text-lg leading-relaxed animate-fade-in-up transition-all duration-500" style={{animationDelay: '0.2s'}}>
-                  I am a software Engineer. I love building applications that provide great benefit to clients and developers alike. I enjoy all aspects of software Engineering, becoming proficient with both front end and back end development. Currently I am working as a freelance developer helping local clients on projects to solve their technical needs.
+                  I'm a Computer Science graduate with a First-Class BSc and experience in software engineering, cloud computing, and project delivery. I'm currently working as a freelance developer, taking client projects from brief through to live deployment, alongside a shift management role where I lead teams and solve problems under pressure. I'm passionate about emerging technology and supporting others through technical challenges.
                 </p>
               </div>
 
@@ -47,15 +47,17 @@ const Home = () => {
               <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 animate-fade-in-up" style={{animationDelay: '0.7s'}}>
                 <div className="p-4 rounded-lg bg-gray-900 border border-gray-800 shadow animate-card-reveal transition hover:-translate-y-1 hover:shadow-lg">
                   <h4 className="text-cyan-300 font-semibold text-sm sm:text-base">Quick snapshot</h4>
-                  <p className="text-xs sm:text-sm text-gray-300 mt-2">Dedicated Software Engineer with a 1st Class BSc in Computer Science from the University of Bedfordshire. Passionate about leveraging technology to solve complex problems, with expertise in full-stack development and a commitment to delivering high-quality, user-centric solutions in fast-paced environments.
+                  <p className="text-xs sm:text-sm text-gray-300 mt-2">First-Class BSc (Hons) Computer Science from the University of Bedfordshire. A broad technical foundation spanning software development, data handling, cloud and IT systems, with practical experience delivering client-facing digital solutions. Seeking an entry-level role across the technology sector.
                   </p>
                 </div>
 
                 <div className="p-4 rounded-lg bg-gray-900 border border-gray-800 shadow animate-card-reveal transition hover:-translate-y-1 hover:shadow-lg">
                   <h4 className="text-cyan-300 font-semibold text-sm sm:text-base">Highlights</h4>
                   <ul className="text-xs sm:text-sm text-gray-300 mt-2 space-y-1">
-                    <li>Proficient in modern frameworks like React for dynamic user interfaces and Django for scalable backend services.</li>
-                    <li>Experienced in building full-stack applications using technologies such as Python, SQL databases, AWS cloud services, and containerization tools like Docker.</li>
+                    <li>Designed, built and deployed a live business website with online bookings for a freelance client.</li>
+                    <li>Full-stack experience with Python, Django, React, SQL and AWS, plus machine learning with scikit-learn.</li>
+                    <li>Project manager on university team projects using PRINCE2, Agile and Scrum.</li>
+                    <li>Promoted three times in three years to Shift Manager, leading and training teams.</li>
                   </ul>
                 </div>
               </div>

@@ -23,7 +23,7 @@ const About: React.FC = () => {
                 className="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover object-top border-4 border-cyan-500 shadow-lg transform transition-transform hover:scale-[1.03] animate-fade-in-down"
               />
               <h1 className="mt-4 text-xl sm:text-2xl font-extrabold text-cyan-300 animate-fade-in-up" style={{animationDelay: '0.2s'}}>James Bragg</h1>
-              <p className="mt-1 text-xs sm:text-sm text-gray-300 animate-fade-in-up" style={{animationDelay: '0.3s'}}>Software developer — frontend & backend</p>
+              <p className="mt-1 text-xs sm:text-sm text-gray-300 animate-fade-in-up" style={{animationDelay: '0.3s'}}>Software developer — Freelance</p>
 
               <div className="mt-4 flex gap-2 flex-wrap justify-center animate-fade-in-up" style={{animationDelay: '0.4s'}}>
                 <a
@@ -44,7 +44,7 @@ const About: React.FC = () => {
               <div className="mt-6 w-full bg-gray-850/30 border border-gray-800 rounded-lg p-3 text-left animate-fade-in-up" style={{animationDelay: '0.5s'}}>
                 <h3 className="text-xs text-gray-300 uppercase tracking-wide">Quick info</h3>
                 <ul className="mt-2 text-xs sm:text-sm text-gray-300 space-y-1">
-                  <li><strong className="text-gray-100">Location:</strong> UK, County of Northamptonshire</li>
+                  <li><strong className="text-gray-100">Location:</strong> Corby, Northamptonshire, UK</li>
                   <li><strong className="text-gray-100">Availability:</strong> Open to opportunities</li>
                   <li><strong className="text-gray-100">Travel:</strong> Willing to travel. Full UK driving license Available</li>
                 </ul>
@@ -55,7 +55,7 @@ const About: React.FC = () => {
               <div className="prose prose-invert max-w-none">
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-cyan-200 animate-fade-in-down">About</h2>
                 <p className="text-gray-300 text-base sm:text-lg leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-                  I'm a Software Engineer with a passion for building polished, accessible interfaces and reliable systems. Beyond code, I'm driven by curiosity, creative problem-solving, and a commitment to continuous learning. Whether optimizing algorithms, managing complex projects using PRINCE2 principles, or exploring emerging technologies, I bring both technical rigor and a thoughtful approach to every challenge. Outside the tech world, I'm enthusiastic about storytelling through film, immersed in tabletop gaming and creative worlds, and always eager to connect with others. I believe great solutions come from diverse perspectives and genuine teamwork.
+                  I'm a First-Class Computer Science graduate with experience in software engineering, cloud computing, and project delivery. I currently combine freelance web development with a shift management role at McDonald's, where I lead teams, manage operational processes, and solve problems under pressure. Beyond code, I'm driven by curiosity, creative problem-solving, and a commitment to continuous learning. Whether optimizing algorithms, managing complex projects using PRINCE2 principles, or exploring emerging technologies, I bring both technical rigor and a thoughtful approach to every challenge. Outside the tech world, I'm enthusiastic about storytelling through film, immersed in tabletop gaming and creative worlds, and always eager to connect with others. I believe great solutions come from diverse perspectives and genuine teamwork.
                 </p>
               </div>
 
@@ -63,7 +63,7 @@ const About: React.FC = () => {
                 <div className="p-4 rounded-lg bg-gray-900 border border-gray-800 shadow animate-card-reveal transition hover:shadow-lg transform hover:scale-[1.02] hover:-translate-y-1">
                   <h4 className="font-semibold text-cyan-300 text-sm sm:text-base">Technical Skills</h4>
                   <div className="mt-3 flex flex-wrap gap-2">
-                    {['React', 'JavaScript', 'Tailwind', 'SQL', 'Python', 'Django', 'Git', 'GitHub', 'REST', 'AWS', 'RUST', 'Agile', 'PRINCE2', 'Project Management', 'Team Leadership', 'Problem Solving'].map(skill => (
+                    {['Python', 'JavaScript', 'TypeScript', 'HTML/CSS', 'SQL', 'Rust', 'React', 'Django', 'scikit-learn', 'Tailwind', 'AWS', 'SQL Server', 'SQLite', 'Wix', 'Git', 'PRINCE2', 'Agile', 'Scrum', 'Team Leadership', 'Mentoring', 'Problem Solving'].map(skill => (
                       <span key={skill} className="px-3 py-1 bg-gray-800/60 text-sm rounded-full text-gray-200">{skill}</span>
                     ))}
                   </div>
@@ -74,26 +74,47 @@ const About: React.FC = () => {
                   <ol className="relative border-l border-gray-800 ml-2 pl-4 space-y-6 text-xs sm:text-sm text-gray-300">
                   <li className="relative">
                     <span className="absolute -left-6 top-0 inline-flex items-center justify-center w-3 h-3 rounded-full bg-cyan-400 ring-2 ring-gray-900"></span>
-                    <div className="font-semibold text-gray-100 text-xs sm:text-sm">BSc (Hons) Computer Science — 1st Class</div>
-                    <div className="text-xs text-gray-400">University of Bedfordshire | 2023</div>
+                    <div className="font-semibold text-gray-100">Freelance Developer</div>
+                    <div className="text-xs text-gray-400">2026 – present | Designed, built and deployed a bespoke business website with online booking and CMS for a local client, managing the full project lifecycle</div>
                   </li>
                   <li className="relative">
                     <span className="absolute -left-6 top-0 inline-flex items-center justify-center w-3 h-3 rounded-full bg-cyan-400 ring-2 ring-gray-900"></span>
-                    <div className="font-semibold text-gray-100">Dissertation Project — Student Social Web Platform</div>
-                    <div className="text-xs text-gray-400">Full-stack development with Django & React</div>
+                    <div className="font-semibold text-gray-100">Shift Manager — McDonald's</div>
+                    <div className="text-xs text-gray-400">2024 – present | Lead shift teams, delegate tasks, track stock against demand forecasts, and troubleshoot equipment faults under time pressure</div>
                   </li>
                   <li className="relative">
                     <span className="absolute -left-6 top-0 inline-flex items-center justify-center w-3 h-3 rounded-full bg-cyan-400 ring-2 ring-gray-900"></span>
-                    <div className="font-semibold text-gray-100">University Group Projects</div>
-                    <div className="text-xs text-gray-400">Collaborative work using PRINCE2 principles and agile methodologies</div>
+                    <div className="font-semibold text-gray-100">Crew Trainer — McDonald's</div>
+                    <div className="text-xs text-gray-400">2023 – 2024 | Trained and mentored new team members on procedures and systems</div>
                   </li>
                   <li className="relative">
                     <span className="absolute -left-6 top-0 inline-flex items-center justify-center w-3 h-3 rounded-full bg-cyan-400 ring-2 ring-gray-900"></span>
-                    <div className="font-semibold text-gray-100">Project Manager — Multiple University Projects</div>
-                    <div className="text-xs text-gray-400">Led and coordinated cross-functional teams, managed timelines, deliverables, and stakeholder communications</div>
+                    <div className="font-semibold text-gray-100">Crew Member — McDonald's</div>
+                    <div className="text-xs text-gray-400">2021 – 2023 | Promoted three times in three years</div>
                   </li>
                 </ol>
                 </div>
+              </div>
+
+              <div className="mt-2 p-4 rounded-lg bg-linear-to-r from-gray-900/40 to-gray-800/30 border border-gray-800 animate-fade-in-up" style={{animationDelay: '0.35s'}}>
+                <h4 className="font-semibold text-cyan-300 mb-3 text-sm sm:text-base">Education</h4>
+                <ol className="relative border-l border-gray-800 ml-2 pl-4 space-y-6 text-xs sm:text-sm text-gray-300">
+                  <li className="relative">
+                    <span className="absolute -left-6 top-0 inline-flex items-center justify-center w-3 h-3 rounded-full bg-cyan-400 ring-2 ring-gray-900"></span>
+                    <div className="font-semibold text-gray-100">BSc (Hons) Computer Science — First Class Honours</div>
+                    <div className="text-xs text-gray-400">University of Bedfordshire | 2019 – 2022 | Key modules: Databases, AI, Distributed Systems, Software Engineering, Project Management</div>
+                  </li>
+                  <li className="relative">
+                    <span className="absolute -left-6 top-0 inline-flex items-center justify-center w-3 h-3 rounded-full bg-cyan-400 ring-2 ring-gray-900"></span>
+                    <div className="font-semibold text-gray-100">BTEC Level 3 Extended Diploma in Computer Science — Merit, Merit, Merit</div>
+                    <div className="text-xs text-gray-400">Tresham College | 2017 – 2019</div>
+                  </li>
+                  <li className="relative">
+                    <span className="absolute -left-6 top-0 inline-flex items-center justify-center w-3 h-3 rounded-full bg-cyan-400 ring-2 ring-gray-900"></span>
+                    <div className="font-semibold text-gray-100">GCSEs & Level 2 BCS ECDL — Distinction</div>
+                    <div className="text-xs text-gray-400">Corby Business Academy | 2017 | GCSEs including English, Maths and Computer Science</div>
+                  </li>
+                </ol>
               </div>
 
               <div className="mt-2 p-4 rounded-lg bg-linear-to-r from-gray-900/40 to-gray-800/30 border border-gray-800 animate-fade-in-up" style={{animationDelay: '0.4s'}}>

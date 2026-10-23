@@ -10,48 +10,64 @@ interface Project {
 
 const completedProjects: Project[] = [
 	{
-		title: 'DnD Companion',
+		title: 'Host Death Link',
 		description:
-			'Manage Combat Encounters with the built in Initiative Tracker. As well as saving Users and initiative bonuses.',
-		tech: ['HTML', 'CSS', 'JavaScript', 'Git'],
-		repo: 'https://github.com/James-Bragg/DnD-Initiative-Tracker',
-		demo: 'https://james-bragg.github.io/DnD-Initiative-Tracker/',
-	},
-	{
-		title: 'My Dissertation project.',
-		description:
-			'A Forum/Social media platform built to allow student collaboration across universities to allow for greater developed of social skills and collaboration.',
-		tech: ['HTML', 'CSS', 'JAVAScript', 'Python', 'Django', 'AWS', 'SQL', 'Git'],
-		repo: 'https://github.com/James-Bragg/StudentSocialWeb',
+			'• An Elden Ring Seamless Co-op add-on written in Rust: when the host dies, every other player in the session dies too. • Built as a native Windows DLL loaded through ModEngine2, hooking into game state via the fromsoftware-rs crates. • Per-player TOML configuration identifies the host, including sessions with three or more players. • Catches panics in the main loop so errors never crash the game.',
+		tech: ['Rust', 'Windows API', 'DLL', 'Game Modding', 'Git'],
+		repo: 'https://github.com/James-Bragg/hostdeath-link',
 		demo: '',
 	},
 	{
 		title: 'Local Business Website',
 		description:
-			'A customer-facing website for a local business that allows customers to view business information, contact the business, and create and manage service bookings online. It was built using a CMS so the client can easily manage and update content after launch.',
-		tech: ['CMS, HTML,'],
+			'• Freelance project: designed, built and deployed a bespoke business website for a local client using Wix. • Implemented an online booking system, service catalogue, and clear location and contact information. • Responsive design for desktop and mobile, configured as a CMS so the client can update content independently. • Managed the full project lifecycle, from requirements gathering and client communication through to deployment.',
+		tech: ['Wix', 'CMS', 'Responsive Design', 'Client Management'],
 		repo: '',
 		demo: 'https://www.thaitawanmassage.co.uk/',
 	},
 	{
-		title: 'Visual Sorting Algorithms',
+		title: 'Cloud Computing for E-learning (Dissertation)',
 		description:
-			'A collaborative project that visualizes various sorting algorithms in real-time, allowing users to see how different algorithms work step-by-step. Built with Python using Pygame for graphics, Tkinter for GUI controls, and Pillow for image handling, with data persistence in a SQL database. I was the project manager for this project, using effective agile and PRINCE2 methodologies to ensure deadlines and budgets were met.',
-		tech: ['Python', 'Pygame', 'Tkinter', 'Pillow', 'SQL', 'Git', 'Project Managment','PRINCE2', 'AGILE'],
+			'• Designed and built a cloud-based social media and forum platform for e-learning, based on research into gaps in peer-collaboration tools during remote learning. • Role-based access for Students, Teachers and Admins, including forum creation/moderation, user profiles and direct messaging. • Python/Django back end with a MySQL database, and an HTML, CSS and JavaScript front end. • Deployed and configured a cloud-hosted MySQL database on AWS with access control for secure remote connections. • Led the end-to-end SDLC: requirements gathering, competitor analysis, design, development and testing.',
+		tech: ['Python', 'Django', 'MySQL', 'AWS', 'HTML', 'CSS', 'JavaScript', 'Git'],
+		repo: 'https://github.com/James-Bragg/StudentSocialWeb',
+		demo: '',
+	},
+	{
+		title: 'Facial Recognition using Machine Learning',
+		description:
+			'• Improved model accuracy from an 89% baseline to a 97% average, with a peak of 99%, through systematic hyperparameter tuning. • Tuned batch size, solver selection, principal components and hidden neuron count. • Built with Python and scikit-learn (MLPClassifier) on Google Colab using artificial neural networks.',
+		tech: ['Python', 'scikit-learn', 'Neural Networks', 'Google Colab'],
+		repo: '',
+		demo: '',
+	},
+	{
+		title: 'Algorithm Visualizer',
+		description:
+			'• Group project: a GUI-based Python application that visualizes sorting algorithms and compares their execution speed. • Led the team from initiation to completion as Project Manager, applying PRINCE2 principles to deliver on schedule. • Managed scope, timelines and responsibilities with Gantt charts and regular team meetings to track progress and resolve blockers. • Built using Python, SQL and the Tkinter GUI library.',
+		tech: ['Python', 'Tkinter', 'Pygame', 'SQL', 'Git', 'PRINCE2', 'Project Management'],
 		repo: 'https://github.com/James-Bragg/Y3-GroupProject',
 		demo: '',
 	},
 	{
-		title: 'Mathematical Game',
-		description: 'I created a mathematical quiz game for a university project, Using a range of technologies. This was created using JAVA as well as SQL Lite for database storage needs. Which allows users to create an account to store their own scores and user information. As well as a leaderboard that shows top users scores to allow for competition. I used my own custom GUI and game engine to handle the visuals and processing alike. Finally I used an API to get location data of users by obtaining and storing IPAdress from users.',
-		tech: ['JAVA', 'SQL', 'GUI','API', 'OOP'],
+		title: 'Student Kiosk System',
+		description: '• Co-developed a web-based kiosk application for the University of Bedfordshire, enabling students, staff, and local businesses to view and book campus events and services. • Built the application on Oracle APEX with a SQL back-end. • Led market research and requirements gathering, including a student questionnaire, and applied Scrum sprints and Soft Systems Methodology, including CATWOE, to define functional, non-functional and stakeholder requirements. • Designed and built the SQL database, including triggers, sequences and normalised table structures. • Developed authentication and authorisation features, including secure password hashing.',
+		tech: ['Oracle APEX', 'SQL', 'Scrum'],
 		repo: '',
 		demo: '',
 	},
-		{
-		title: 'Student Kiosk System',
-		description: '• Co-developed a web-based kiosk application for the University of Bedfordshire, enabling students, staff, and local businesses to view and book campus events and services. • Built the application on Oracle APEX with a SQL back-end. • Led market research and requirements gathering, including a student questionnaire, and applied Scrum sprints and Soft Systems Methodology, including CATWOE, to define functional, non-functional and stakeholder requirements • Designed and built the SQL database, including triggers, sequences and normalized table structures. • Developed authentication and authorization features, including secure password hashing.',
-		tech: ['Oracle','SQL'],
+	{
+		title: 'DnD Companion',
+		description:
+			'Manage combat encounters with the built-in initiative tracker, as well as saving players and their initiative bonuses.',
+		tech: ['HTML', 'CSS', 'JavaScript', 'Git'],
+		repo: 'https://github.com/James-Bragg/DnD-Initiative-Tracker',
+		demo: 'https://james-bragg.github.io/DnD-Initiative-Tracker/',
+	},
+	{
+		title: 'Mathematical Game',
+		description: 'A mathematical quiz game built for a university project in Java with SQLite storage. Users can create accounts to store their scores, compete on a leaderboard of top scores, and play through a custom GUI and game engine. An external API is used to look up user location data.',
+		tech: ['Java', 'SQLite', 'GUI', 'API', 'OOP'],
 		repo: '',
 		demo: '',
 	},
