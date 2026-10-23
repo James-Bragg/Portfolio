@@ -63,7 +63,7 @@ const Home = () => {
 
             <aside className="md:col-span-1 flex flex-col items-center text-center">
               <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-cyan-500 shadow-lg transform transition hover:scale-[1.03] animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-                <img src="/Portfolio/James.png" alt="James Bragg" className="w-full h-full object-cover animate-soft-float" />
+                <img src="/Portfolio/James.png" alt="James Bragg" className="w-full h-full object-cover" />
               </div>
 
               <div className="mt-4 w-full bg-gray-850/10 border border-gray-800 rounded-lg p-3 text-left">
