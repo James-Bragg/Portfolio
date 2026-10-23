@@ -46,7 +46,7 @@ const About: React.FC = () => {
                 <ul className="mt-2 text-xs sm:text-sm text-gray-300 space-y-1">
                   <li><strong className="text-gray-100">Location:</strong> Corby, Northamptonshire, UK</li>
                   <li><strong className="text-gray-100">Availability:</strong> Open to opportunities</li>
-                  <li><strong className="text-gray-100">Travel:</strong> Willing to travel. Full UK driving license Available</li>
+                  <li><strong className="text-gray-100">Driving:</strong> Full UK driving licence</li>
                 </ul>
               </div>
             </aside>
@@ -55,7 +55,7 @@ const About: React.FC = () => {
               <div className="prose prose-invert max-w-none">
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-cyan-200 animate-fade-in-down">About</h2>
                 <p className="text-gray-300 text-base sm:text-lg leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-                  I'm a First-Class Computer Science graduate with experience in software engineering, cloud computing, and project delivery. I currently combine freelance web development with a shift management role at McDonald's, where I lead teams, manage operational processes, and solve problems under pressure. Beyond code, I'm driven by curiosity, creative problem-solving, and a commitment to continuous learning. Whether optimizing algorithms, managing complex projects using PRINCE2 principles, or exploring emerging technologies, I bring both technical rigor and a thoughtful approach to every challenge. Outside the tech world, I'm enthusiastic about storytelling through film, immersed in tabletop gaming and creative worlds, and always eager to connect with others. I believe great solutions come from diverse perspectives and genuine teamwork.
+                  I'm a First-Class Computer Science graduate with experience in software engineering, cloud computing, and project delivery. I currently combine freelance web development with a shift management role at McDonald's, where I lead teams, manage operational processes, and solve problems under pressure. I've taken a freelance web project from client brief through to live deployment, and led university team projects as Project Manager using PRINCE2 and Agile. I'm passionate about emerging technology and supporting others through technical challenges. Outside the tech world, I'm enthusiastic about storytelling through film, immersed in tabletop gaming and creative worlds, and always eager to connect with others.
                 </p>
               </div>
 

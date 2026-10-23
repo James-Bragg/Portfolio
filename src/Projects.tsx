@@ -45,7 +45,7 @@ const completedProjects: Project[] = [
 		title: 'Algorithm Visualizer',
 		description:
 			'• Group project: a GUI-based Python application that visualizes sorting algorithms and compares their execution speed. • Led the team from initiation to completion as Project Manager, applying PRINCE2 principles to deliver on schedule. • Managed scope, timelines and responsibilities with Gantt charts and regular team meetings to track progress and resolve blockers. • Built using Python, SQL and the Tkinter GUI library.',
-		tech: ['Python', 'Tkinter', 'Pygame', 'SQL', 'Git', 'PRINCE2', 'Project Management'],
+		tech: ['Python', 'Tkinter', 'Pygame', 'Pillow', 'SQLite', 'Git', 'PRINCE2', 'Project Management'],
 		repo: 'https://github.com/James-Bragg/Y3-GroupProject',
 		demo: '',
 	},
@@ -64,27 +64,13 @@ const completedProjects: Project[] = [
 		repo: 'https://github.com/James-Bragg/DnD-Initiative-Tracker',
 		demo: 'https://james-bragg.github.io/DnD-Initiative-Tracker/',
 	},
-	{
-		title: 'Mathematical Game',
-		description: 'A mathematical quiz game built for a university project in Java with SQLite storage. Users can create accounts to store their scores, compete on a leaderboard of top scores, and play through a custom GUI and game engine. An external API is used to look up user location data.',
-		tech: ['Java', 'SQLite', 'GUI', 'API', 'OOP'],
-		repo: '',
-		demo: '',
-	},
 ];
 
 const ongoingProjects: Project[] = [
 	{
-		title: 'Learning Rust and Systems Programming',
-		description: 'Currently exploring Rust programming language and systems-level concepts to build efficient, low-level applications and deepen understanding of computer systems.',
+		title: 'Learning Rust',
+		description: 'Continuing to develop my Rust and systems programming skills, building on projects like Host Death Link.',
 		tech: ['Rust', 'Systems Programming'],
-		repo: '#',
-		demo: '#',
-	},
-	{
-		title: 'Raspberry Pi Web Server',
-		description: 'Building a general-purpose server on Raspberry Pi using Rust for hosting applications, emphasizing efficiency, memory safety, and low-power operation.',
-		tech: ['Rust', 'Raspberry Pi', 'Web Server'],
 		repo: '#',
 		demo: '#',
 	},
@@ -147,7 +133,7 @@ const Projects: React.FC = () => {
 							My <span className="text-cyan-400">Projects</span>
 						</h1>
 						<p className="text-gray-300 text-base sm:text-lg leading-relaxed mt-4 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-							Explore my portfolio of completed projects, spanning web applications, system programming, and general software development. Each project highlights innovative solutions, efficient algorithms, and a dedication to clean, maintainable code.
+							Projects from my freelance work, university degree and personal interests, spanning web applications, cloud computing, machine learning, and systems programming in Rust.
 						</p>
 					</header>
 
