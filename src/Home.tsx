@@ -27,7 +27,7 @@ const Home = () => {
           <Reveal delay={80}>
             <h1 className="mt-7 font-display text-5xl font-semibold leading-[0.95] tracking-tight sm:text-7xl lg:text-[5.5rem]">
               James
-              <span className="text-gradient">Bragg.</span>
+              <span className="text-gradient">Bragg</span>
             </h1>
           </Reveal>
 
