@@ -1,97 +1,118 @@
 html {
-	scrollbar-color: #313949 #07080b;
-	scrollbar-width: thin;
-	scroll-behavior: smooth;
+  scrollbar-color: #313949 #07080b;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
 }
 
 body {
-	min-height: 100vh;
-	background-color: #07080b;
+  min-height: 100vh;
+  background-color: #07080b;
 }
 
 /* Ambient backdrop: drifting warm/cool glows, a faint dot grid, and a
    spotlight that follows the cursor (--mx/--my are set in App.tsx). */
 body::before,
 body::after {
-	content: "";
-	position: fixed;
-	inset: 0;
-	z-index: 0;
-	pointer-events: none;
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
 }
 
 body::before {
-	background:
-		radial-gradient(40rem 30rem at 12% -5%, rgb(255 154 31 / 0.12), transparent 70%),
-		radial-gradient(45rem 35rem at 95% 30%, rgb(124 180 255 / 0.09), transparent 70%),
-		radial-gradient(35rem 30rem at 40% 110%, rgb(255 180 84 / 0.06), transparent 70%);
-	animation: ambient-drift 24s ease-in-out infinite alternate;
+  background:
+    radial-gradient(
+      40rem 30rem at 12% -5%,
+      rgb(255 154 31 / 0.12),
+      transparent 70%
+    ),
+    radial-gradient(
+      45rem 35rem at 95% 30%,
+      rgb(124 180 255 / 0.09),
+      transparent 70%
+    ),
+    radial-gradient(
+      35rem 30rem at 40% 110%,
+      rgb(255 180 84 / 0.06),
+      transparent 70%
+    );
+  animation: ambient-drift 24s ease-in-out infinite alternate;
 }
 
 body::after {
-	background:
-		radial-gradient(28rem circle at var(--mx, 50%) var(--my, -20%), rgb(255 180 84 / 0.07), transparent 60%),
-		radial-gradient(rgb(255 255 255 / 0.07) 1px, transparent 1px) 0 0 / 28px 28px;
-	mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, black 30%, transparent 100%);
+  background:
+    radial-gradient(
+      28rem circle at var(--mx, 50%) var(--my, -20%),
+      rgb(255 180 84 / 0.07),
+      transparent 60%
+    ),
+    radial-gradient(rgb(255 255 255 / 0.07) 1px, transparent 1px) 0 0 / 28px
+      28px;
+  mask-image: radial-gradient(
+    ellipse 80% 70% at 50% 30%,
+    black 30%,
+    transparent 100%
+  );
 }
 
 @keyframes ambient-drift {
-	from {
-		transform: translate3d(0, 0, 0) scale(1);
-	}
-	to {
-		transform: translate3d(-2%, 3%, 0) scale(1.08);
-	}
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(-2%, 3%, 0) scale(1.08);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-	html {
-		scroll-behavior: auto;
-	}
+  html {
+    scroll-behavior: auto;
+  }
 
-	*,
-	*::before,
-	*::after {
-		animation-duration: 0.01ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
-	}
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 
-	.reveal {
-		opacity: 1 !important;
-		transform: none !important;
-	}
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 
-	/* Static, wrapping skill list instead of the scrolling strip. */
-	.marquee {
-		mask-image: none;
-	}
+  /* Static, wrapping skill list instead of the scrolling strip. */
+  .marquee {
+    mask-image: none;
+  }
 
-	.marquee-track {
-		width: auto;
-		flex-wrap: wrap;
-		animation: none;
-	}
+  .marquee-track {
+    width: auto;
+    flex-wrap: wrap;
+    animation: none;
+  }
 
-	.marquee-track > [aria-hidden="true"] {
-		display: none;
-	}
+  .marquee-track > [aria-hidden="true"] {
+    display: none;
+  }
 }
 
 ::-webkit-scrollbar {
-	width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-	background: #07080b;
+  background: #07080b;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #313949;
-	border: 2px solid #07080b;
-	border-radius: 999px;
+  background: #313949;
+  border: 2px solid #07080b;
+  border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #ffb454;
+  background: #ffb454;
 }
