@@ -12,7 +12,7 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/james-bragg-0a02a036a/',
   status: 'Open to entry-level roles',
   intro:
-    "I'm a Computer Science graduate with a First-Class BSc and experience in software engineering, cloud computing, and project delivery. I'm currently working as a freelance developer, taking client projects from brief through to live deployment, alongside a shift management role where I lead teams and solve problems under pressure.",
+    "I am a Computer Science graduate with a First-Class BSc and experience in software engineering, cloud computing, and project delivery. I'm currently working as a freelance developer, taking client projects from brief through to live deployment, alongside a shift management role where I lead teams and solve problems under pressure.",
 };
 
 export const stats = [
